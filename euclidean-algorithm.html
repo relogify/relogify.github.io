@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euclidean Algorithm | relogify</title>
+  <meta name="description" content="Euclidean Algorithm — a relogify math article.">
+
+  <link rel="canonical" href="https://relogify.vibeotter.com/euclidean-algorithm.html">
+  <meta property="og:url" content="https://relogify.vibeotter.com/euclidean-algorithm.html">
+  <meta property="og:title" content="Euclidean Algorithm | relogify">
+  <meta property="og:description" content="Euclidean Algorithm — a relogify math article.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://relogify.vibeotter.com/images/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Euclidean Algorithm | relogify">
+  <meta name="twitter:description" content="Euclidean Algorithm — a relogify math article.">
+  <meta name="twitter:image" content="https://relogify.vibeotter.com/images/og-cover.jpg">
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://relogify.vibeotter.com/"},{"@type":"ListItem","position":2,"name":"Euclidean Algorithm","item":"https://relogify.vibeotter.com/euclidean-algorithm.html"}]}</script>
+
+  <link rel="icon" type="image/png" href="images/favicon-1784979303819.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16-1784979303819.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32-1784979303819.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48-1784979303819.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-1784979303819.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+<base>
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-logo">
+        <a href="index.html">
+          <img src="images/lightning-bolt-infinity-logo.jpg" alt="Relogify logo" class="sidebar-logo-img">
+          relogify
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="math.html" class="nav-link active">Math</a></li>
+        <li><a href="physics.html" class="nav-link">Physics</a></li>
+        <li><a href="additional.html" class="nav-link">Additional</a></li>
+        <li><a href="donations.html" class="nav-link">Donations</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <div class="page-inner">
+        <h1 class="page-title">Euclidean Algorithm</h1>
+        <div class="divider"></div>
+
+        <!-- ARTICLE CONTENT WITH IMAGE SYSTEM -->
+        <div class="article-layout">
+          <div>
+            <p class="article-text">
+              Imagine you're trying to find the </p> <p class="section-text-3">Greatest Common Divisor</p> 
+              <p class="article-text"> 
+              between two numbers: {a, b}. </br>
+              In mathematical notation this would be denoted as: gcd(a, b).  </br></br>
+              You can plug this into a calculator and the result will always be a whole number greater than or equal to 1.
+              The Euclidean Algorithm is the standard systematic method for how this is computed.
+            </p>
+          </br>
+            <p class="article-text">
+              Lets look at an example: gcd ( 15, 125 ) . </br></br>
+              Here: a=125 and b=15. </br> Do not get confused because of the order of the numbers; a will always be greater than b.
+              So we know the bigger number can be rexpressed in terms of the smaller number.
+              In this case: </br> 125 = 15 * 8 + 5. </br>
+            </br>
+              Now whats important to note is the divisor, and the remainder. The remainder ( 5 ) must be smaller
+              than the divisor, if it wasn't we could just simplify the remainder more.
+              </br> So taking this fact, we can express the divisor in terms of the remainder.
+            </br></br>
+              15 = 5 * 3 + 0. </br></br>
+            Systematically, we can repeat this process until the remainder is 0. 
+            When the remainder is 0 that indicates that the smaller number (the divisor) has gone into the bigger number (the dividend) completely.
+            This systematic repetition is the computational application of Euclid's Algorithm.
+          </br></br> 
+          <p class="section-label"> I interchangeably use the name "Euclid" and "Euclidean" but both are referring to the same algorithm.</p>
+        </br>
+        <p class="section-label-big"> 
+          Proof
+        </p> 
+        <p class="section-text-3">The Greatest Common Divisor</p> <p class="article-text"> of our two original numbers {a,b} is the same as the GCD of {b,r}. 
+        </br>We can write the equation: </br></br> 
+          a = (b * q) + r </br></br> 
+          where q is the quotient (a divided by b, rounded to a whole number) </br> and r is the remainder. </br></br>
+          Divide the equation by any constant " d " to a or b, and you get: </br></br>
+          a/d = (b/d * q) + r/d </br></br>
+          We can express r as { a - b*q } by rearranging the original equation. </br> After grouping like terms and reorganization: </br></br>
+            a/d = (b/d * q) + (a - b*q)/d </br></br>
+            a/d = (b/d * q) + a/d - b*q/d </br></br>
+            a/d - a/d = (b/d * q) - b*q/d </br></br>
+            0 = 0. </br></br>
+          This shows that the GCD of {a,b} is the same as the GCD of {b,r}, as they are the foundational building blocks of the same two numbers.
+        </br>
+
+      </p>
+          </div>
+          <div class="article-images">
+            <div class="article-img-box">
+              <img src="images/gcd-image.png" alt="GCD calculator examples showing gcd(25,125)=25, gcd({20,48},{62,122})={2 2}, and gcd({33,99},3)={3 3}">
+            </div>
+            <!-- Add more .article-img-box blocks here for additional images -->
+             <div class="article-img-box">
+             </br></br>
+              <img src="images/euclid_algorithm-1.png" alt="Euclidean Algorithm example showing 125 = 15 * 8 + 5 and 15 = 5 * 3 + 0">
+          </div>
+            <div class="article-img-box">
+              <img src="images/euclid_algorithm-2.png" alt="Euclidean Algorithm example showing 125 = 15 * 8 + 5 and 15 = 5 * 3 + 0">
+            </div>
+            <div class="article-img-box">
+              <img src="images/euclid_algorithm-3.png" alt="Euclidean Algorithm example proof">
+            </div>
+        </div>
+        <!-- /ARTICLE CONTENT -->
+
+      </div>
+    </main>
+  </div>
+
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
+  <img src="images/lightning-bolt-infinity-logo.jpg" alt="Relogify logo" class="top-right-logo">
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<!--
+
+To add an image to any article
+
+Drop the image file into images/
+Copy the .article-layout block from the template
+Change the src in .article-img-box img to point to your image
+Add more .article-img-box divs if you need multiple images — they're all the same size automatically
+
+---->>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>relogify</title>
+  <meta name="description" content="An informational website which provides alternative ways to view and conceptualize challenging scientific and mathematical ideas. Updated every Sunday.">
+  
+  <link rel="canonical" href="https://relogify.vibeotter.com/">
+  <meta property="og:url" content="https://relogify.vibeotter.com/">
+  <meta property="og:title" content="relogify">
+  <meta property="og:description" content="An informational website which provides alternative ways to view and conceptualize challenging scientific and mathematical ideas. Updated every Sunday.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://relogify.vibeotter.com/images/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="relogify">
+  <meta name="twitter:description" content="An informational website which provides alternative ways to view and conceptualize challenging scientific and mathematical ideas. Updated every Sunday.">
+  <meta name="twitter:image" content="https://relogify.vibeotter.com/images/og-cover.jpg">
+  
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"relogify","url":"https://relogify.vibeotter.com/"}</script>
+  
+  <link rel="icon" type="image/png" href="images/favicon-1784979303819.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16-1784979303819.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32-1784979303819.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48-1784979303819.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-1784979303819.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-logo">
+        <a href="index.html">
+          <img src="images/lightning-bolt-infinity-logo.jpg" alt="Relogify logo" class="sidebar-logo-img">
+          relogify
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="math.html" class="nav-link">Math</a></li>
+        <li><a href="physics.html" class="nav-link">Physics</a></li>
+        <li><a href="additional.html" class="nav-link">Additional</a></li>
+        <li><a href="donations.html" class="nav-link">Donations</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="page-inner">
+        <!-- Title -->
+        <div class="site-main-title-wrap">
+          <h1 class="site-main-title">relogify</h1>
+          <img src="images/lightning-bolt-infinity-logo.jpg" alt="Relogify logo" class="home-title-logo">
+        </div>
+
+        <!-- Description -->
+        <div class="section-block-2">
+          <p class="section-text-4">an informational website which serves to provides an alternative way to think about and conceptualize challenging scientific and mathematical ideas.</p>
+        </br>
+        </br>
+        </div>
+
+        <!-- RelogiFact -->
+        <div class="section-block">
+          <p class="section-label-big">Relogifact Of The Day</p>
+          <p class="section-text-2">
+                </p> <p class="section-text-3">1729</p> <p class="section-text-2"> 
+                is the smallest number which can be expressed as the sum of two cubes in two different ways: </br>
+                1729 = 1³ + 12³ = 9³ + 10³. 
+                </br>
+                </br>
+                This number is known as the Hardy-Ramanujan number, or Ramanujan's Constant, named after the mathematicians G.H. Hardy and Srinivasa Ramanujan.
+          </p>
+        </div>
+
+        <!-- Guide -->
+        <div class="section-block">
+          <p class="section-label">Guide</p>
+          <p class="section-text">Click on the sidebar on the left and check out a section you're interested in. Click on any article for any topics in the section.</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-section">
+          <h2 class="contact-heading">Contact</h2>
+          <div class="contact-boxes">
+            <div class="contact-box">
+              <p>Author and Founder: Prajwal Sharma- Gaire</p>
+              <p>Email: gaireprajwal4@gmail.com</p>
+              <p>Baltimore, Maryland</p>
+            </br>
+              <p> Web Admin and Frontend Developer: John Cummiskey </p>
+              <p>Email: JohnMCummiskey@protonmail.com </p>
+              <p>Baltimore, Maryland</p>
+            </div>
+            <div class="contact-box contact-box-right">
+              <p>This website was created with the intention to spread what I know and love about math and science to other people, make sure to check out the Additional section!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile Nav Toggle -->
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
+
+  <img src="images/lightning-bolt-infinity-logo.jpg" alt="Relogify logo" class="top-right-logo">
+  <script src="script.js" defer></script>
+</body>
+</html>

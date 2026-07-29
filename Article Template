@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Title | relogify</title>
+  <meta name="description" content="Article description.">
+
+  <link rel="icon" type="image/png" href="images/favicon-1784979303819.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16-1784979303819.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32-1784979303819.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48-1784979303819.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-1784979303819.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+<base target="_blank">
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="sidebar-logo">
+        <a href="index.html">
+          <img src="images/lightning-bolt-infinity-logo.jpg" alt="Relogify logo" class="sidebar-logo-img">
+          relogify
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="math.html" class="nav-link">Math</a></li>
+        <li><a href="physics.html" class="nav-link">Physics</a></li>
+        <li><a href="additional.html" class="nav-link">Additional</a></li>
+        <li><a href="donations.html" class="nav-link">Donations</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <div class="page-inner">
+        <h1 class="page-title">Article Title</h1>
+        <div class="divider"></div>
+
+        <!-- ============================================================
+             ARTICLE IMAGE SYSTEM — Copy this block into every article
+
+             How to use:
+             1. Put your article text inside .article-text
+             2. Put each image inside its own .article-img-box
+             3. Add as many .article-img-box blocks as you need
+             4. All images are automatically the same size (280x210)
+             5. Images sit on the right with 7px gap from text
+             6. On mobile, images stack below the text
+             ============================================================ -->
+        <div class="article-layout">
+          <div class="article-text">
+            <p>
+              Write your article text here. Use &lt;br&gt; tags for line breaks.
+              <br><br>
+              The text column will shrink to make room for images on the right.
+              <br><br>
+              Images never overlap or touch the text — a 7px gap is always enforced.
+            </p>
+          </div>
+          <div class="article-images">
+            <!-- Image 1 -->
+            <div class="article-img-box">
+              <img src="images/your-image-1.png" alt="Description of image 1">
+            </div>
+            <!-- Image 2 -->
+            <div class="article-img-box">
+              <img src="images/your-image-2.png" alt="Description of image 2">
+            </div>
+            <!-- Image 3 — add as many as you need -->
+            <div class="article-img-box">
+              <img src="images/your-image-3.png" alt="Description of image 3">
+            </div>
+          </div>
+        </div>
+        <!-- /ARTICLE IMAGE SYSTEM -->
+
+      </div>
+    </main>
+  </div>
+
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
+  <img src="images/lightning-bolt-infinity-logo.jpg" alt="Relogify logo" class="top-right-logo">
+  <script src="script.js" defer></script>
+</body>
+</html>
