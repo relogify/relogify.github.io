@@ -446,6 +446,40 @@ a {
 }
 
 /* ============================================
+   MATH EQUATIONS & NOTATION
+   Use .math-equation for standalone equations
+   Use .math-inline for inline math notation
+============================================ */
+
+.math-equation {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #9be3ff;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid rgb(133, 167, 235);
+  padding: 10px 16px;
+  margin: 14px 0;
+  border-radius: 4px;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.math-inline {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9be3ff;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ============================================
    ARTICLE BODY (fallback for plain text pages)
 ============================================ */
 

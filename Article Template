@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 <base target="_blank">
 </head>
@@ -60,7 +60,10 @@
               The text column will shrink to make room for images on the right.
               <br><br>
               Images never overlap or touch the text — a 7px gap is always enforced.
+              <br><br>
+              For math notation inline use: <span class="math-inline">f(x) = x^2</span>.
             </p>
+            <div class="math-equation">e^(i * pi) + 1 = 0</div>
           </div>
           <div class="article-images">
             <!-- Image 1 -->

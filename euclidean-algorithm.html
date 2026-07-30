@@ -27,7 +27,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 <base>
 </head>
@@ -61,8 +61,8 @@
             <p>
               Imagine you're trying to find the </p> <p class="section-text-3">Greatest Common Divisor</p> 
               <p class="article-text"> 
-              between two numbers: {a, b}. </br>
-              In mathematical notation this would be denoted as: gcd(a, b).  </br></br>
+              between two numbers: <span class="math-inline">{a, b}</span>. </br>
+              In mathematical notation this would be denoted as: <span class="math-inline">gcd(a, b)</span>.  </br></br>
               You can plug this into a calculator and the result will always be a whole number greater than or equal to 1.
               The Euclidean Algorithm is the standard systematic method for how this is computed.
             </p>
@@ -78,11 +78,12 @@
         <div class="article-layout">
           <div class="article-text">
             <p>
-              Lets look at an example: gcd ( 15, 125 ) . </br></br>
-              Here: a=125 and b=15. </br> Do not get confused because of the order of the numbers; a will always be greater than b.
+              Lets look at an example: <span class="math-inline">gcd(15, 125)</span> . </br></br>
+              Here: <span class="math-inline">a = 125</span> and <span class="math-inline">b = 15</span>. </br> Do not get confused because of the order of the numbers; a will always be greater than b.
               So we know the bigger number can be rexpressed in terms of the smaller number.
-              In this case: </br> 125 = 15 * 8 + 5. </br>
+              In this case:
             </p>
+            <div class="math-equation">125 = 15 * 8 + 5</div>
           </div>
           <div class="article-images">
             <div class="article-img-box">
@@ -95,11 +96,12 @@
         <div class="article-layout">
           <div class="article-text">
             <p>
-              Now whats important to note is the divisor, and the remainder. The remainder ( 5 ) must be smaller
+              Now whats important to note is the divisor, and the remainder. The remainder (<span class="math-inline">5</span>) must be smaller
               than the divisor, if it wasn't we could just simplify the remainder more.
               </br> So taking this fact, we can express the divisor in terms of the remainder.
-            </br></br>
-              15 = 5 * 3 + 0. </br></br>
+            </p>
+            <div class="math-equation">15 = 5 * 3 + 0</div>
+            <p>
             Systematically, we can repeat this process until the remainder is 0. 
             When the remainder is 0 that indicates that the smaller number (the divisor) has gone into the bigger number (the dividend) completely.
             This systematic repetition is the computational application of Euclid's Algorithm.
@@ -120,18 +122,25 @@
           <p class="section-label-big"> 
             Proof
           </p> 
-          <p class="section-text-3">The Greatest Common Divisor</p> <p class="article-text"> of our two original numbers {a,b} is the same as the GCD of {b,r}. 
-          </br>We can write the equation: </br></br> 
-            a = (b * q) + r </br></br> 
-            where q is the quotient (a divided by b, rounded to a whole number) </br> and r is the remainder. </br></br>
-            Divide the equation by any constant " d " to a or b, and you get: </br></br>
-            a/d = (b/d * q) + r/d </br></br>
-            We can express r as { a - b*q } by rearranging the original equation. </br> After grouping like terms and reorganization: </br></br>
-              a/d = (b/d * q) + (a - b*q)/d </br></br>
-              a/d = (b/d * q) + a/d - b*q/d </br></br>
-              a/d - a/d = (b/d * q) - b*q/d </br></br>
-              0 = 0. </br></br>
-            This shows that the GCD of {a,b} is the same as the GCD of {b,r}, as they are the foundational building blocks of the same two numbers.
+          <p class="section-text-3">The Greatest Common Divisor</p> <p class="article-text"> of our two original numbers <span class="math-inline">{a, b}</span> is the same as the GCD of <span class="math-inline">{b, r}</span>. 
+          </br>We can write the equation: </p>
+          <div class="math-equation">a = (b * q) + r</div>
+          <p class="article-text">
+            where <span class="math-inline">q</span> is the quotient (a divided by b, rounded to a whole number) </br> and <span class="math-inline">r</span> is the remainder. </br></br>
+            Divide the equation by any constant "<span class="math-inline">d</span>" to <span class="math-inline">a</span> or <span class="math-inline">b</span>, and you get:
+          </p>
+          <div class="math-equation">a/d = (b/d * q) + r/d</div>
+          <p class="article-text">
+            We can express <span class="math-inline">r</span> as <span class="math-inline">{ a - b*q }</span> by rearranging the original equation. </br> After grouping like terms and reorganization:
+          </p>
+          <div class="math-equation">
+            a/d = (b/d * q) + (a - b*q)/d </br>
+            a/d = (b/d * q) + a/d - b*q/d </br>
+            a/d - a/d = (b/d * q) - b*q/d </br>
+            0 = 0
+          </div>
+          <p class="article-text">
+            This shows that the GCD of <span class="math-inline">{a, b}</span> is the same as the GCD of <span class="math-inline">{b, r}</span>, as they are the foundational building blocks of the same two numbers.
           </p>
 
           <!-- Last image made big -->
