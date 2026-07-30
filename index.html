@@ -123,17 +123,48 @@ Add more .article-img-box divs if you need multiple images — they're all the s
        RELOGIFACT HISTORY MODAL POPUP
        Shows the date and fact of each Relogifact of the week.
        To add a new weekly Relogifact:
-       Add a line to weeklyfact.txt formatted as: "fact text" Date
+       1. Create a US date text file in weekly-facts/ (e.g. 8-6-26.txt)
+       2. Add the filename to weekly-facts/index.txt
        ============================================================ -->
   <div class="modal-overlay" id="historyModal">
     <div class="modal-box">
       <div class="modal-header">
         <h2 class="modal-title">Relogifact History</h2>
-        <button class="modal-close" id="closeHistoryBtn" aria-label="Close modal">&times;</button>
+        <div class="modal-header-actions">
+          <button class="relogifact-history-btn sort-btn" id="sortHistoryBtn">Sort: Newest First &#8595;</button>
+          <button class="modal-close" id="closeHistoryBtn" aria-label="Close modal">&times;</button>
+        </div>
       </div>
       <p class="modal-subtitle">Archive of past weekly Relogifacts</p>
       <div class="modal-body" id="historyModalBody">
-        <!-- Automatically populated from weeklyfact.txt -->
+        <!-- Automatically populated from weekly-facts/ folder -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       LATEST WEEKLY FACT POPUP MODAL
+       Automatically pops up with the latest txt file from weekly-facts/
+       Includes "Don't show again" option stored in localStorage
+       ============================================================ -->
+  <div class="modal-overlay" id="latestFactModal">
+    <div class="modal-box latest-fact-box">
+      <div class="modal-header">
+        <h2 class="modal-title">Weekly Relogifact</h2>
+        <button class="modal-close" id="closeLatestFactBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <p class="modal-subtitle" id="latestFactDate">Loading date...</p>
+      <div class="modal-body">
+        <div class="latest-fact-text" id="latestFactText">
+          Loading latest weekly fact...
+        </div>
+      </div>
+      <div class="modal-footer">
+        <label class="dont-show-again-label">
+          <input type="checkbox" id="dontShowAgainCheckbox">
+          <span>Don't show this weekly fact again</span>
+        </label>
+        <button class="relogifact-history-btn" id="closeLatestFactActionBtn">Got It</button>
       </div>
     </div>
   </div>

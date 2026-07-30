@@ -144,29 +144,28 @@ Once an article is complete and ready to publish, delete `<span class="wip-badge
 
 ---
 
-## 6. Managing the Weekly RelogiFact & History Popup
+## 6. Managing Weekly Facts & Archive Popups
 
-The homepage features a **Relogifact Of The Day** along with a **View History** button that opens a popup modal archive showing past weekly RelogiFacts.
+Relogify automatically pops up a modal on the homepage with the **latest weekly fact** and provides a **View History** modal archive where all past facts can be sorted by date.
 
-### Updating the Current Homepage Fact
-In `index.html`, locate the `<!-- RelogiFact -->` block and update the text:
-```html
-<p class="section-text-2"></p>
-<p class="section-text-3">1729</p> 
-<p class="section-text-2"> 
-  is the smallest number which can be expressed as the sum of two cubes...
-</p>
-```
+### How Weekly Facts Work
+- All weekly facts are stored as individual `.txt` files in the **`weekly-facts/`** directory.
+- Each file is named with the US date format: **`MM-DD-YY.txt`** (for example, `7-30-26.txt` for July 30, 2026).
+- Inside the `.txt` file, place the fact text in quotation marks along with the date:
+  ```text
+  "example" July 30, 2026
+  ```
+- To determine the **latest weekly fact**, the system checks the US date in the filename. For example, `7-30-26.txt` is displayed as the latest fact if there is no `7-31-26.txt` or beyond.
+- **Don't Show Again:** In the automatic popup, users can check *"Don't show this weekly fact again"*. The system stores the latest filename in `localStorage` so it won't pop up again until a newer weekly fact file is published.
 
-### Adding an Entry to the History Popup
-All history cards are stored in a simple text file named `weeklyfact.txt` located in the root directory.
-
-1. Open `weeklyfact.txt` in any text editor.
-2. Add a new line at the **top** of the file formatted with the fact inside quotation marks and the date:
-```text
-"example" July 30, 2026
-```
-3. Save the file. When a user clicks **View History** on `index.html`, the popup will automatically fetch `weeklyfact.txt` and display your facts!
+### How to Add a New Weekly Fact
+1. Create a new text file inside `weekly-facts/` using US date format (e.g. `8-6-26.txt`).
+2. Inside `weekly-facts/8-6-26.txt`, write:
+   ```text
+   "Your new fact text goes here" August 6, 2026
+   ```
+3. Open `weekly-facts/index.txt` and add your filename `8-6-26.txt` to the list.
+4. Save your files. When a reader visits the homepage, `8-6-26.txt` will automatically pop up as the newest fact! Older files remain in the **View History** archive and can be sorted chronologically.
 
 ---
 

@@ -763,6 +763,66 @@ a.wip::after {
 }
 
 /* ============================================
+   LATEST WEEKLY FACT POPUP & ARCHIVE ENHANCEMENTS
+============================================ */
+
+.latest-fact-box {
+  max-width: 540px;
+  border: 1px solid rgb(133, 167, 235);
+  box-shadow: 0 0 30px rgba(133, 167, 235, 0.25);
+}
+
+.latest-fact-text {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #9be3ff;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid rgb(133, 167, 235);
+  padding: 14px 18px;
+  border-radius: 4px;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 24px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dont-show-again-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  user-select: none;
+}
+
+.dont-show-again-label input[type="checkbox"] {
+  accent-color: rgb(133, 167, 235);
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.modal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sort-btn {
+  font-size: 0.65rem;
+  padding: 4px 10px;
+}
+
+/* ============================================
    RESPONSIVE
 ============================================ */
 
