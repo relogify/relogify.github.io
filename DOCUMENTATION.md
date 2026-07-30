@@ -190,3 +190,9 @@ Because Relogify uses no build steps, deploying changes is as simple as committi
    ```
 
 When changes on the `dev` branch are reviewed and ready to go live, merge `dev` into the `main` branch.
+
+---
+
+## 8. Licensing
+
+Relogify is open-source software licensed under the **GNU Affero General Public License Version 3.0 (AGPL-3.0)**. See the `LICENSE` file in the root directory for full terms.

@@ -24,3 +24,9 @@ For a comprehensive step-by-step guide on how to add articles, format equations,
 - **Readable Monospace Math Equations:** Clear typography for standalone equations (`<div class="math-equation">...</div>`) and inline math variables (`<span class="math-inline">...</span>`).
 - **WIP Symbol for Unfinished Articles:** Easily mark in-progress articles on index pages with `<span class="wip-badge">🚧 WIP</span>` or `class="wip"`.
 - **Weekly RelogiFact Popups & Archive:** Automatic homepage modal popup showing the latest weekly fact (determined by US filename date in `weekly-facts/` like `7-30-26.txt`) with a "Don't show again" `localStorage` option, plus a date-sortable archive modal.
+
+---
+
+## License
+
+This repository is licensed under the **GNU Affero General Public License Version 3.0 (AGPL-3.0)**. See the [`LICENSE`](./LICENSE) file for details.
