@@ -215,7 +215,14 @@ a {
   margin-bottom:0px;
 }
 
-.section-label {
+/* ============================================
+   TYPOGRAPHY — SECTIONS & LABELS
+============================================ */
+
+.section-label,
+.article-text .section-label,
+.article-text p.section-label {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.25em;
@@ -224,7 +231,10 @@ a {
   margin-bottom: 10px;
 }
 
-.section-label-big {
+.section-label-big,
+.article-text .section-label-big,
+.article-text p.section-label-big {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
   letter-spacing: 0.25em;
@@ -234,6 +244,7 @@ a {
 }
 
 .section-text {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 0.82rem;
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -241,7 +252,9 @@ a {
   line-height: 1.9;
   max-width: 580px;
 }
+
 .section-text-2 {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 0.82rem;
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -249,7 +262,12 @@ a {
   line-height: 1.9;
   max-width: 100%;
 }
-.section-text-3 {
+
+.section-text-3,
+.article-text .section-text-3,
+.article-text p.section-text-3,
+.article-text span.section-text-3 {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -257,7 +275,9 @@ a {
   line-height: 1.9;
   max-width: 100%;
 }
+
 .section-text-4 {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.267rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -310,6 +330,7 @@ a {
 ============================================ */
 
 .section-subtitle {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 21px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -319,6 +340,7 @@ a {
 }
 
 .section-click-prompt {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -383,7 +405,7 @@ a {
   min-width: 0;
 }
 
-.article-text p {
+.article-text p:not([class*="section-"]) {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.04em;

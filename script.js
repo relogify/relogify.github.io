@@ -162,7 +162,7 @@ async function checkAndShowLatestFact() {
   const latest = facts[0];
 
   // Update the homepage current fact display so it matches the latest fact and appears in archive
-  if (currentWeeklyFactText) currentWeeklyFactText.textContent = `"${latest.factText}"`;
+  if (currentWeeklyFactText) currentWeeklyFactText.innerHTML = `"${latest.factText}"`;
   if (currentWeeklyFactDate) currentWeeklyFactDate.textContent = latest.dateString;
 
   if (!latestFactModal) return;
@@ -170,7 +170,7 @@ async function checkAndShowLatestFact() {
 
   if (hiddenFact !== latest.filename) {
     if (latestFactDate) latestFactDate.textContent = `${latest.dateString} (${latest.filename})`;
-    if (latestFactText) latestFactText.textContent = `"${latest.factText}"`;
+    if (latestFactText) latestFactText.innerHTML = `"${latest.factText}"`;
     if (dontShowAgainCheckbox) dontShowAgainCheckbox.checked = false;
 
     setTimeout(() => {
