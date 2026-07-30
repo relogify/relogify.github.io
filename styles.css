@@ -288,6 +288,83 @@ a {
 }
 
 /* ============================================
+   ARTICLE SUBHEADINGS & HIGHLIGHT TEXT
+============================================ */
+
+.subheading-purple,
+.article-text .subheading-purple,
+.article-text p.subheading-purple {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgb(217, 195, 245);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.subheading-red,
+.article-text .subheading-red,
+.article-text p.subheading-red {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(231, 56, 94, 0.932);
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.subheading-yellow,
+.article-text .subheading-yellow,
+.article-text p.subheading-yellow {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1.22rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ffd866;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.text-red,
+.article-text .text-red,
+.article-text span.text-red,
+.article-text u.text-red {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: rgba(231, 56, 94, 0.932);
+}
+
+.text-yellow,
+.article-text .text-yellow,
+.article-text span.text-yellow {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #ffd866;
+}
+
+.text-green,
+.article-text .text-green,
+.article-text span.text-green {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #69f0ae;
+}
+
+.article-note,
+.article-text .article-note,
+.article-text p.article-note {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  font-style: italic;
+  margin: 12px 0;
+}
+
+/* ============================================
    HOMEPAGE — CONTACT
 ============================================ */
 
