@@ -154,7 +154,7 @@ Relogify automatically pops up a modal on the homepage with the **latest weekly 
 - Each file is named with the US date format: **`MM-DD-YY.txt`** (for example, `7-30-26.txt` for July 30, 2026).
 - Inside the `.txt` file, place the fact text in quotation marks along with the date:
   ```text
-  "example" July 30, 2026
+  "1729 is the smallest number which can be expressed as the sum of two cubes in two different ways: 1729 = 1³ + 12³ = 9³ + 10³. This number is known as the Hardy-Ramanujan number, or Ramanujan's Constant, named after the mathematicians G.H. Hardy and Srinivasa Ramanujan." July 30, 2026
   ```
 - To determine the **latest weekly fact**, the system checks the US date in the filename. For example, `7-30-26.txt` is displayed as the latest fact if there is no `7-31-26.txt` or beyond.
 - **Don't Show Again:** In the automatic popup, users can check *"Don't show this weekly fact again"*. The system stores the latest filename in `localStorage` so it won't pop up again until a newer weekly fact file is published.
