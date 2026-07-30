@@ -419,6 +419,93 @@ a {
   padding: 6px;
 }
 
+/* Big image box modifier for featured or proof diagrams */
+.article-img-box.big,
+.article-img-box-big {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  min-height: 380px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.article-img-box.big img,
+.article-img-box-big img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  padding: 12px;
+}
+
+/* ============================================
+   MATH EQUATIONS & NOTATION
+   Use .math-equation for standalone equations
+   Use .math-inline for inline math notation
+============================================ */
+
+.math-equation {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #9be3ff;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid rgb(133, 167, 235);
+  padding: 10px 16px;
+  margin: 14px 0;
+  border-radius: 4px;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.math-inline {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9be3ff;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   WIP (WORK IN PROGRESS) SYMBOL FOR UNFINISHED ARTICLES
+   How to use:
+   Add <span class="wip-badge">🚧 WIP</span> after any unfinished article link
+   Or add class="wip" to any <a> tag
+============================================ */
+
+.wip-badge,
+a.wip::after {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffd866;
+  background-color: rgba(255, 216, 102, 0.12);
+  border: 1px solid rgba(255, 216, 102, 0.35);
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+a.wip::after {
+  content: "🚧 WIP";
+}
+
 /* ============================================
    ARTICLE BODY (fallback for plain text pages)
 ============================================ */
@@ -526,6 +613,220 @@ a {
 }
 
 /* ============================================
+   RELOGIFACT HISTORY FEATURE (BUTTON & MODAL)
+============================================ */
+
+.relogifact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.current-weekly-fact {
+  margin-top: 10px;
+}
+
+.relogifact-history-btn {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(133, 167, 235, 0.15);
+  border: 1px solid rgb(133, 167, 235);
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.relogifact-history-btn:hover {
+  background-color: rgb(133, 167, 235);
+  color: #000;
+  box-shadow: 0 0 12px rgba(133, 167, 235, 0.4);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Box */
+.modal-box {
+  background-color: #0d0e12;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(217, 195, 245);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: rgba(231, 56, 94, 0.932);
+}
+
+.modal-subtitle {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 0 24px 14px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Modal Body (scrollable list of cards) */
+.modal-body {
+  padding: 20px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Individual History Card */
+.history-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.history-card:hover {
+  border-color: rgb(133, 167, 235);
+}
+
+.history-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgb(133, 167, 235);
+  margin-bottom: 8px;
+}
+
+.history-fact {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ============================================
+   LATEST WEEKLY FACT POPUP & ARCHIVE ENHANCEMENTS
+============================================ */
+
+.latest-fact-box {
+  max-width: 540px;
+  border: 1px solid rgb(133, 167, 235);
+  box-shadow: 0 0 30px rgba(133, 167, 235, 0.25);
+}
+
+.latest-fact-text {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #9be3ff;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid rgb(133, 167, 235);
+  padding: 14px 18px;
+  border-radius: 4px;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 24px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dont-show-again-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  user-select: none;
+}
+
+.dont-show-again-label input[type="checkbox"] {
+  accent-color: rgb(133, 167, 235);
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.modal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sort-btn {
+  font-size: 0.65rem;
+  padding: 4px 10px;
+}
+
+/* ============================================
    RESPONSIVE
 ============================================ */
 
@@ -577,6 +878,14 @@ a {
     height: auto;
     aspect-ratio: 4 / 3;
   }
+
+  .article-img-box.big,
+  .article-img-box-big {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    aspect-ratio: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -586,5 +895,14 @@ a {
 
   .content {
     padding: 80px 20px 40px;
+  }
+
+  .modal-box {
+    max-height: 90vh;
+  }
+
+  .modal-header, .modal-body {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

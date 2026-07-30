@@ -38,7 +38,7 @@ Add more .article-img-box divs if you need multiple images — they're all the s
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -72,21 +72,20 @@ Add more .article-img-box divs if you need multiple images — they're all the s
         <!-- Description -->
         <div class="section-block-2">
           <p class="section-text-4">an informational website which serves to provides an alternative way to think about and conceptualize challenging scientific and mathematical ideas.</p>
-        </br>
-        </br>
+        <br>
+        <br>
         </div>
 
-        <!-- RelogiFact -->
+        <!-- Weekly RelogiFact -->
         <div class="section-block">
-          <p class="section-label-big">Relogifact Of The Day</p>
-          <p class="section-text-2">
-                </p> <p class="section-text-3">1729</p> <p class="section-text-2"> 
-                is the smallest number which can be expressed as the sum of two cubes in two different ways: </br>
-                1729 = 1³ + 12³ = 9³ + 10³. 
-                </br>
-                </br>
-                This number is known as the Hardy-Ramanujan number, or Ramanujan's Constant, named after the mathematicians G.H. Hardy and Srinivasa Ramanujan.
-          </p>
+          <div class="relogifact-header">
+            <p class="section-label-big" style="margin: 0;">Weekly Relogifact</p>
+            <button class="relogifact-history-btn" id="openHistoryBtn">View History</button>
+          </div>
+          <div class="current-weekly-fact" id="currentWeeklyFactBox">
+            <p class="section-text-2" id="currentWeeklyFactText" style="font-size:0.95rem; line-height:1.8;">"1729 is the smallest number which can be expressed as the sum of two cubes in two different ways: 1729 = 1³ + 12³ = 9³ + 10³. This number is known as the Hardy-Ramanujan number, or Ramanujan's Constant, named after the mathematicians G.H. Hardy and Srinivasa Ramanujan."</p>
+            <p class="section-label" id="currentWeeklyFactDate" style="margin-top: 8px;">July 30, 2026</p>
+          </div>
         </div>
 
         <!-- Guide -->
@@ -103,7 +102,7 @@ Add more .article-img-box divs if you need multiple images — they're all the s
               <p>Author and Founder: Prajwal Sharma- Gaire</p>
               <p>Email: gaireprajwal4@gmail.com</p>
               <p>Baltimore, Maryland</p>
-            </br>
+            <br>
               <p> Web Admin and Frontend Developer: John Cummiskey </p>
               <p>Email: JohnMCummiskey@protonmail.com </p>
               <p>Baltimore, Maryland</p>
@@ -115,6 +114,56 @@ Add more .article-img-box divs if you need multiple images — they're all the s
         </div>
       </div>
     </main>
+  </div>
+
+  <!-- ============================================================
+       RELOGIFACT HISTORY MODAL POPUP
+       Shows the date and fact of each Relogifact of the week.
+       To add a new weekly Relogifact:
+       1. Create a US date text file in weekly-facts/ (e.g. 8-6-26.txt)
+       2. Add the filename to weekly-facts/index.txt
+       ============================================================ -->
+  <div class="modal-overlay" id="historyModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title">Weekly Relogifact History</h2>
+        <div class="modal-header-actions">
+          <button class="relogifact-history-btn sort-btn" id="sortHistoryBtn">Sort: Newest First &#8595;</button>
+          <button class="modal-close" id="closeHistoryBtn" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+      <p class="modal-subtitle">Archive of past weekly Relogifacts</p>
+      <div class="modal-body" id="historyModalBody">
+        <!-- Automatically populated from weekly-facts/ folder -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       LATEST WEEKLY FACT POPUP MODAL
+       Automatically pops up with the latest txt file from weekly-facts/
+       Includes "Don't show again" option stored in localStorage
+       ============================================================ -->
+  <div class="modal-overlay" id="latestFactModal">
+    <div class="modal-box latest-fact-box">
+      <div class="modal-header">
+        <h2 class="modal-title">Weekly Relogifact</h2>
+        <button class="modal-close" id="closeLatestFactBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <p class="modal-subtitle" id="latestFactDate">Loading date...</p>
+      <div class="modal-body">
+        <div class="latest-fact-text" id="latestFactText">
+          Loading latest weekly fact...
+        </div>
+      </div>
+      <div class="modal-footer">
+        <label class="dont-show-again-label">
+          <input type="checkbox" id="dontShowAgainCheckbox">
+          <span>Don't show this weekly fact again</span>
+        </label>
+        <button class="relogifact-history-btn" id="closeLatestFactActionBtn">Got It</button>
+      </div>
+    </div>
   </div>
 
   <!-- Mobile Nav Toggle -->
