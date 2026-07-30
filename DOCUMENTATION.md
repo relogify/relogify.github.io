@@ -12,14 +12,14 @@ The framework is set up as minimal and basic as possible—no Node.js build tool
 3. [Spacing Images & Big Diagrams](#3-spacing-images--big-diagrams)
 4. [Writing Readable Math Equations](#4-writing-readable-math-equations)
 5. [Using the WIP Symbol for Unfinished Articles](#5-using-the-wip-symbol-for-unfinished-articles)
-6. [Managing the Weekly RelogiFact & History Popup](#6-managing-the-weekly-relogifact--history-popup)
+6. [Managing Weekly Facts & Archive Popups](#6-managing-weekly-facts--archive-popups)
 7. [Workflow & Deploying Changes](#7-workflow--deploying-changes)
 
 ---
 
 ## 1. Site Structure Overview
 
-- `index.html` — The main homepage featuring the Relogifact of the Day, Guide, and Contact information.
+- `index.html` — The main homepage featuring the Weekly RelogiFact, Guide, and Contact information.
 - `math.html` — Section index listing all Math articles.
 - `physics.html` — Section index listing all Physics articles.
 - `additional.html` — Section index listing all Additional articles.
