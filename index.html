@@ -78,7 +78,10 @@ Add more .article-img-box divs if you need multiple images — they're all the s
 
         <!-- RelogiFact -->
         <div class="section-block">
-          <p class="section-label-big">Relogifact Of The Day</p>
+          <div class="relogifact-header">
+            <p class="section-label-big" style="margin: 0;">Relogifact Of The Day</p>
+            <button class="relogifact-history-btn" id="openHistoryBtn">View History</button>
+          </div>
           <p class="section-text-2">
                 </p> <p class="section-text-3">1729</p> <p class="section-text-2"> 
                 is the smallest number which can be expressed as the sum of two cubes in two different ways: </br>
@@ -114,6 +117,25 @@ Add more .article-img-box divs if you need multiple images — they're all the s
         </div>
       </div>
     </main>
+  </div>
+
+  <!-- ============================================================
+       RELOGIFACT HISTORY MODAL POPUP
+       Shows the date and fact of each Relogifact of the week.
+       To add a new weekly Relogifact:
+       Add an entry to RELOGIFACTS_HISTORY in script.js
+       ============================================================ -->
+  <div class="modal-overlay" id="historyModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title">Relogifact History</h2>
+        <button class="modal-close" id="closeHistoryBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <p class="modal-subtitle">Archive of past weekly Relogifacts</p>
+      <div class="modal-body" id="historyModalBody">
+        <!-- Automatically populated from RELOGIFACTS_HISTORY in script.js -->
+      </div>
+    </div>
   </div>
 
   <!-- Mobile Nav Toggle -->
