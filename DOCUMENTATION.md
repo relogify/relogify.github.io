@@ -149,6 +149,7 @@ Once an article is complete and ready to publish, delete `<span class="wip-badge
 Relogify automatically pops up a modal on the homepage with the **latest weekly fact** and provides a **View History** modal archive where all past facts can be sorted by date.
 
 ### How Weekly Facts Work
+- The homepage **Weekly RelogiFact** section automatically displays the **latest weekly fact** from `weekly-facts/`, ensuring the fact on the page always matches the latest fact and appears in the **View History** archive.
 - All weekly facts are stored as individual `.txt` files in the **`weekly-facts/`** directory.
 - Each file is named with the US date format: **`MM-DD-YY.txt`** (for example, `7-30-26.txt` for July 30, 2026).
 - Inside the `.txt` file, place the fact text in quotation marks along with the date:

@@ -20,6 +20,8 @@ const closeLatestFactActionBtn = document.getElementById('closeLatestFactActionB
 const dontShowAgainCheckbox = document.getElementById('dontShowAgainCheckbox');
 const latestFactDate = document.getElementById('latestFactDate');
 const latestFactText = document.getElementById('latestFactText');
+const currentWeeklyFactText = document.getElementById('currentWeeklyFactText');
+const currentWeeklyFactDate = document.getElementById('currentWeeklyFactDate');
 
 let cachedFacts = [];
 let sortOrder = 'desc'; // 'desc' = Newest first, 'asc' = Oldest first
@@ -153,12 +155,17 @@ if (closeHistoryBtn && historyModal) {
 
 // Automatically pop up latest weekly fact if not hidden by "Don't show again"
 async function checkAndShowLatestFact() {
-  if (!latestFactModal) return;
   const facts = await fetchWeeklyFacts();
   if (facts.length === 0) return;
 
   // The latest fact is the first item when sorted descending by US filename date
   const latest = facts[0];
+
+  // Update the homepage current fact display so it matches the latest fact and appears in archive
+  if (currentWeeklyFactText) currentWeeklyFactText.textContent = `"${latest.factText}"`;
+  if (currentWeeklyFactDate) currentWeeklyFactDate.textContent = latest.dateString;
+
+  if (!latestFactModal) return;
   const hiddenFact = localStorage.getItem('relogify_hide_fact');
 
   if (hiddenFact !== latest.filename) {

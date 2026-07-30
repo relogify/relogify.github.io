@@ -625,6 +625,10 @@ a.wip::after {
   margin-bottom: 12px;
 }
 
+.current-weekly-fact {
+  margin-top: 10px;
+}
+
 .relogifact-history-btn {
   font-family: 'Orbitron', sans-serif;
   font-size: 0.72rem;
