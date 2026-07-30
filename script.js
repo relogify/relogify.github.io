@@ -1,56 +1,61 @@
 // ============================================================================
-// RELOGIFACT HISTORY DATA (EASY FOR NOVICES TO EDIT & MANAGE)
+// RELOGIFACT HISTORY POPUP MODAL LOGIC (LOADED FROM weeklyfact.txt)
 // ============================================================================
-// How to add a new Relogifact of the week:
-// 1. Copy one of the blocks below { date: "...", fact: "..." },
-// 2. Paste it at the TOP of the RELOGIFACTS_HISTORY list so the newest is first.
-// 3. Update the date and the fact text!
+// How to manage the Relogifact weekly history:
+// Open weeklyfact.txt and add one fact per line with the fact in quotation marks
+// and the date.
+// Example:
+//   "example" July 30, 2026
 // ============================================================================
 
-const RELOGIFACTS_HISTORY = [
-  {
-    date: "July 26, 2026",
-    fact: "1729 is the smallest number which can be expressed as the sum of two cubes in two different ways: 1729 = 1³ + 12³ = 9³ + 10³. This number is known as the Hardy-Ramanujan number, or Ramanujan's Constant, named after the mathematicians G.H. Hardy and Srinivasa Ramanujan."
-  },
-  {
-    date: "July 19, 2026",
-    fact: "Euler's Identity connects five of the most fundamental mathematical constants in a single elegant equation: e^(iπ) + 1 = 0."
-  },
-  {
-    date: "July 12, 2026",
-    fact: "A topological coffee mug and a doughnut (torus) are homeomorphic—you can smoothly deform one into the other without tearing or gluing because both have exactly one hole."
-  },
-  {
-    date: "July 5, 2026",
-    fact: "Light traveling through a vacuum always moves at exactly 299,792,458 meters per second, regardless of the speed of the observer or source—the foundational postulate of Special Relativity."
-  },
-  {
-    date: "June 28, 2026",
-    fact: "The Banach-Tarski Paradox shows that in theoretical geometry, a solid ball can be partitioned into a finite number of pieces and reassembled into two identical copies of the original ball."
-  }
-];
-
-// ============================================================================
-// RELOGIFACT HISTORY POPUP MODAL LOGIC
-// ============================================================================
 const openHistoryBtn = document.getElementById('openHistoryBtn');
 const closeHistoryBtn = document.getElementById('closeHistoryBtn');
 const historyModal = document.getElementById('historyModal');
 const historyModalBody = document.getElementById('historyModalBody');
 
-function renderRelogifactsHistory() {
+async function renderRelogifactsHistory() {
   if (!historyModalBody) return;
-  historyModalBody.innerHTML = '';
-  
-  RELOGIFACTS_HISTORY.forEach(item => {
-    const card = document.createElement('div');
-    card.className = 'history-card';
-    card.innerHTML = `
-      <div class="history-date">${item.date}</div>
-      <div class="history-fact">${item.fact}</div>
-    `;
-    historyModalBody.appendChild(card);
-  });
+  historyModalBody.innerHTML = '<div class="history-card">Loading history...</div>';
+
+  try {
+    const response = await fetch('weeklyfact.txt');
+    if (!response.ok) throw new Error('Could not load weeklyfact.txt');
+    const text = await response.text();
+
+    const lines = text.split('\n')
+      .map(l => l.trim())
+      .filter(l => l.length > 0 && !l.startsWith('#'));
+
+    historyModalBody.innerHTML = '';
+
+    if (lines.length === 0) {
+      historyModalBody.innerHTML = '<div class="history-card">No weekly facts found.</div>';
+      return;
+    }
+
+    lines.forEach(line => {
+      // Extract text inside quotation marks as the fact
+      const match = line.match(/"([^"]+)"/);
+      let fact = 'No fact text specified';
+      let date = line;
+
+      if (match) {
+        fact = match[1];
+        // Remove the quoted fact from the line to obtain the remaining date text
+        date = line.replace(match[0], '').replace(/^-+|-+$/g, '').trim();
+      }
+
+      const card = document.createElement('div');
+      card.className = 'history-card';
+      card.innerHTML = `
+        <div class="history-date">${date || 'Unknown Date'}</div>
+        <div class="history-fact">${fact}</div>
+      `;
+      historyModalBody.appendChild(card);
+    });
+  } catch (err) {
+    historyModalBody.innerHTML = '<div class="history-card">Unable to load history archive.</div>';
+  }
 }
 
 if (openHistoryBtn && historyModal) {

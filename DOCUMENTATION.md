@@ -159,25 +159,14 @@ In `index.html`, locate the `<!-- RelogiFact -->` block and update the text:
 ```
 
 ### Adding an Entry to the History Popup
-All history cards are stored in a simple, hardcoded list at the top of `script.js` named `RELOGIFACTS_HISTORY`.
+All history cards are stored in a simple text file named `weeklyfact.txt` located in the root directory.
 
-1. Open `script.js` in a text editor.
-2. Locate `const RELOGIFACTS_HISTORY = [`.
-3. Copy one of the `{ date: "...", fact: "..." }` blocks and paste it at the **top** of the list (so the newest fact appears first):
-```javascript
-const RELOGIFACTS_HISTORY = [
-  {
-    date: "August 2, 2026",
-    fact: "Your new interesting Relogifact text goes here..."
-  },
-  {
-    date: "July 26, 2026",
-    fact: "1729 is the smallest number which can be expressed as the sum of two cubes in two different ways..."
-  },
-  // older facts...
-];
+1. Open `weeklyfact.txt` in any text editor.
+2. Add a new line at the **top** of the file formatted with the fact inside quotation marks and the date:
+```text
+"example" July 30, 2026
 ```
-4. Save the file. When a user clicks **View History** on `index.html`, the popup will automatically display your new entry!
+3. Save the file. When a user clicks **View History** on `index.html`, the popup will automatically fetch `weeklyfact.txt` and display your facts!
 
 ---
 

@@ -23,4 +23,4 @@ For a comprehensive step-by-step guide on how to add articles, format equations,
 - **Spaced Image Layout System:** Easily pair text paragraphs with their associated images on the right using `<div class="article-layout">`, and make proof/diagram images large using `<div class="article-img-box big">`.
 - **Readable Monospace Math Equations:** Clear typography for standalone equations (`<div class="math-equation">...</div>`) and inline math variables (`<span class="math-inline">...</span>`).
 - **WIP Symbol for Unfinished Articles:** Easily mark in-progress articles on index pages with `<span class="wip-badge">🚧 WIP</span>` or `class="wip"`.
-- **Weekly RelogiFact History Popup:** A click-to-open modal archive on the homepage showing the date and text of past RelogiFacts, managed via a simple hardcoded list in `script.js`.
+- **Weekly RelogiFact History Popup:** A click-to-open modal archive on the homepage showing the date and text of past RelogiFacts, managed via a simple text file `weeklyfact.txt` (no JavaScript editing needed!).
