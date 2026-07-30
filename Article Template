@@ -44,7 +44,12 @@
         <!-- ============================================================
              ARTICLE IMAGE SYSTEM — Copy this block into every article
 
-             How to use:
+             How to mark an unfinished article as Work in Progress (WIP):
+             In math.html, physics.html, or additional.html, add the WIP symbol after the link:
+             <a href="your-article.html">&#8250; Article Name <span class="wip-badge">🚧 WIP</span></a>
+             Or simply add class="wip" to the <a> tag!
+
+             How to use the Image System:
              1. Put your article text inside .article-text
              2. Put each image inside its own .article-img-box
              3. Add as many .article-img-box blocks as you need

@@ -480,6 +480,33 @@ a {
 }
 
 /* ============================================
+   WIP (WORK IN PROGRESS) SYMBOL FOR UNFINISHED ARTICLES
+   How to use:
+   Add <span class="wip-badge">🚧 WIP</span> after any unfinished article link
+   Or add class="wip" to any <a> tag
+============================================ */
+
+.wip-badge,
+a.wip::after {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffd866;
+  background-color: rgba(255, 216, 102, 0.12);
+  border: 1px solid rgba(255, 216, 102, 0.35);
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+a.wip::after {
+  content: "🚧 WIP";
+}
+
+/* ============================================
    ARTICLE BODY (fallback for plain text pages)
 ============================================ */
 
