@@ -224,7 +224,22 @@ a {
   margin-bottom: 10px;
 }
 
-.section-label-big {
+.section-label,
+.article-text .section-label,
+.article-text p.section-label {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 10px;
+}
+
+.section-label-big,
+.article-text .section-label-big,
+.article-text p.section-label-big {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
   letter-spacing: 0.25em;
@@ -249,7 +264,11 @@ a {
   line-height: 1.9;
   max-width: 100%;
 }
-.section-text-3 {
+.section-text-3,
+.article-text .section-text-3,
+.article-text p.section-text-3,
+.article-text span.section-text-3 {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -383,7 +402,7 @@ a {
   min-width: 0;
 }
 
-.article-text p {
+.article-text p:not([class*="section-"]) {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.04em;
