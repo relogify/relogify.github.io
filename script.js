@@ -84,10 +84,15 @@ async function fetchWeeklyFacts() {
       }
     }
 
-    // Sort descending (newest US filename date first)
-    facts.sort((a, b) => b.dateObj - a.dateObj);
-    cachedFacts = facts;
-    return facts;
+    // Filter to only released facts where the US filename date is on or before today
+    const now = new Date();
+    now.setHours(23, 59, 59, 999);
+    const releasedFacts = facts.filter(f => f.dateObj <= now);
+
+    // Sort descending (newest released US filename date first)
+    releasedFacts.sort((a, b) => b.dateObj - a.dateObj);
+    cachedFacts = releasedFacts;
+    return releasedFacts;
   } catch (err) {
     console.error('Error loading weekly facts archive:', err);
     return [];
