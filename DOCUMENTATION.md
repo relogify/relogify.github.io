@@ -83,16 +83,25 @@ Instead of grouping all images at the bottom of the page, split your article int
 </div>
 ```
 
-### Making an Image Big (e.g., Proof Diagrams)
-When you have a detailed visual diagram or geometric proof that needs more width than a side image, use the `big` modifier class on the image box:
+### Sizing Images (Standard, Medium, and Big)
+Relogify provides three image box sizing options:
+- **Standard Image Box (`.article-img-box`)**: 280px wide (default size for small side diagrams).
+- **Medium Image Box (`.article-images.medium > .article-img-box.medium`)**: 380px wide (ideal for labeled diagrams like Linearity and the Standard Unit Square).
+- **Big Image Box (`.article-img-box.big`)**: Expands up to 720px wide across the full column width (ideal for comprehensive proofs and concept diagrams).
 
 ```html
-<div class="article-img-box big">
-  <img src="images/euclid_algorithm-3.png" alt="Geometric proof diagram">
+<!-- Medium Image Box Example -->
+<div class="article-layout">
+  <div class="article-text">
+    <p>Explanation text...</p>
+  </div>
+  <div class="article-images medium">
+    <div class="article-img-box medium">
+      <img src="images/linear-algebra-1.png" alt="Linearity diagram">
+    </div>
+  </div>
 </div>
 ```
-- Standard image box (`.article-img-box`): 280px × 210px (sits to the right of text).
-- Big image box (`.article-img-box.big`): Expands up to 720px wide with responsive height.
 
 ---
 
@@ -179,7 +188,7 @@ Relogify automatically pops up a modal on the homepage with the **latest weekly 
 The homepage features an interactive **Spark an Intuition &#9889;** widget that allows readers to cycle through curated conceptual summaries directly from published Relogify articles (such as `euclidean-algorithm.html` and `linear-algebra.html`), complete with a **Read Article &rarr;** link. Maintainers can add new excerpts to the `CONCEPTS` list in `script.js` as new articles are published.
 
 ### Embedded Article Suggestion Email Card
-Readers can submit ideas via the embedded **Suggest an Article** card on `index.html`. Clicking **Email Suggestion** opens a pre-formatted email to `suggestions@relogify.vibeotter.com`.
+Readers can submit ideas via the embedded **Suggest an Article** card on `index.html`. Clicking **Email Suggestion** opens a pre-formatted email to `suggestions@example.com`.
 
 ### Customizing Creator Profile Cards (Resumes & Portfolios)
 The **Creators & Contact** section on `index.html` features dedicated profile cards for Prajwal Sharma-Gaire and John Cummiskey.

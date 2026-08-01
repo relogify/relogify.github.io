@@ -52,10 +52,10 @@
              How to use the Image System:
              1. Put your article text inside .article-text
              2. Put each image inside its own .article-img-box
-             3. Add as many .article-img-box blocks as you need
-             4. All images are automatically the same size (280x210)
-             5. Images sit on the right with 7px gap from text
-             6. On mobile, images stack below the text
+             3. Standard image box: 280px wide (.article-img-box)
+             4. Medium image box: 380px wide (.article-images.medium > .article-img-box.medium)
+             5. Big image box: full width up to 720px (.article-img-box.big)
+             6. Images sit on the right with 7px gap from text (stacking on mobile)
              ============================================================ -->
         <div class="article-layout">
           <div class="article-text">

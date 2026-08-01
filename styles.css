@@ -518,6 +518,35 @@ a {
   padding: 6px;
 }
 
+/* Medium Image Box (for diagrams with labels/equations like Linearity and Unit Square) */
+.article-images.medium {
+  width: 380px;
+  min-width: 380px;
+}
+
+.article-img-box.medium,
+.article-img-box-medium {
+  width: 380px;
+  height: auto;
+  min-height: 270px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-img-box.medium img,
+.article-img-box-medium img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  padding: 10px;
+}
+
 /* Big image box modifier for featured or proof diagrams */
 .article-img-box.big,
 .article-img-box-big {
@@ -1165,7 +1194,8 @@ a.wip::after {
     flex-direction: column;
   }
 
-  .article-images {
+  .article-images,
+  .article-images.medium {
     width: 100%;
     min-width: auto;
     flex-direction: row;
@@ -1178,6 +1208,8 @@ a.wip::after {
     aspect-ratio: 4 / 3;
   }
 
+  .article-img-box.medium,
+  .article-img-box-medium,
   .article-img-box.big,
   .article-img-box-big {
     width: 100%;
