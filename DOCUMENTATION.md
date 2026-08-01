@@ -52,6 +52,12 @@ To make longer paragraphs look less condensed, add `class="indent"` to every oth
 <p>Third paragraph in the section...</p>
 ```
 
+### Indented Colored Subheadings
+For smaller subheadings inside article sections (such as *Isn't linearity like the quality of being a line??*), use `.subheading-red` (pink/red), `.subheading-purple` (lavender), or `.subheading-yellow` (yellow). These subheadings are automatically indented 28px to align with indented paragraphs:
+```html
+<p class="subheading-red">Isn’t linearity like the quality of being a line??</p>
+```
+
 ---
 
 ## 3. Spacing Images & Big Diagrams

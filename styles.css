@@ -302,6 +302,7 @@ a {
   color: rgb(217, 195, 245);
   margin-top: 24px;
   margin-bottom: 12px;
+  padding-left: 28px;
 }
 
 .subheading-red,
@@ -314,6 +315,7 @@ a {
   color: rgba(231, 56, 94, 0.932);
   margin-top: 24px;
   margin-bottom: 12px;
+  padding-left: 28px;
 }
 
 .subheading-yellow,
@@ -327,6 +329,7 @@ a {
   color: #ffd866;
   margin-top: 24px;
   margin-bottom: 12px;
+  padding-left: 28px;
 }
 
 .text-red,
@@ -1246,7 +1249,16 @@ a.wip::after {
 
   .article-text p.indent,
   .article-text p.indented-p,
-  .article-text div.indent {
+  .article-text div.indent,
+  .subheading-purple,
+  .article-text .subheading-purple,
+  .article-text p.subheading-purple,
+  .subheading-red,
+  .article-text .subheading-red,
+  .article-text p.subheading-red,
+  .subheading-yellow,
+  .article-text .subheading-yellow,
+  .article-text p.subheading-yellow {
     padding-left: 14px;
   }
 }
