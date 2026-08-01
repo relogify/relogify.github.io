@@ -866,6 +866,92 @@ a.wip::after {
 }
 
 /* ============================================
+   INTERACTIVE HOMEPAGE WIDGETS & SUGGESTION EMAIL
+============================================ */
+
+.concept-explorer-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 3px solid #ffd866;
+  border-radius: 6px;
+  padding: 18px 22px;
+  transition: all 0.25s ease;
+}
+
+.concept-explorer-card:hover {
+  border-color: rgba(255, 216, 102, 0.5);
+  box-shadow: 0 0 20px rgba(255, 216, 102, 0.12);
+}
+
+.concept-tag {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #ffd866;
+  margin-bottom: 8px;
+}
+
+.suggestion-card {
+  background: rgba(133, 167, 235, 0.04);
+  border: 1px solid rgba(133, 167, 235, 0.25);
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.25s ease;
+}
+
+.suggestion-card:hover {
+  border-color: rgb(133, 167, 235);
+  box-shadow: 0 0 24px rgba(133, 167, 235, 0.2);
+}
+
+.suggestion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.suggestion-tag {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: rgb(217, 195, 245);
+}
+
+.suggestion-email {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  color: #9be3ff;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.suggestion-desc {
+  font-size: 0.84rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.suggestion-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+.suggestion-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ============================================
    LATEST WEEKLY FACT POPUP & ARCHIVE ENHANCEMENTS
 ============================================ */
 

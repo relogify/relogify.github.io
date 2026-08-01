@@ -228,6 +228,54 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================================================
+// INTERACTIVE HOMEPAGE CONCEPT EXPLORER (SPARK AN INTUITION)
+// ============================================================================
+
+const CONCEPTS = [
+  {
+    tag: "LINEAR ALGEBRA",
+    title: "Determinants measure area scaling and orientation reversal",
+    desc: "In a 2x2 linear transformation, the determinant calculates how much the area of any region is scaled. A negative determinant indicates that space has been flipped like a mirror reflection."
+  },
+  {
+    tag: "COMPLEX NUMBERS",
+    title: "Euler's Identity connects five fundamental constants",
+    desc: "The equation e^(iπ) + 1 = 0 links exponential growth, rotation in the complex plane, and geometry into a single unified mathematical relationship."
+  },
+  {
+    tag: "TOPOLOGY",
+    title: "Why a doughnut and a coffee mug are homeomorphic",
+    desc: "In topology, objects can be continuously deformed without cutting or gluing. Because both a coffee mug and a torus have exactly one hole, they are topologically equivalent."
+  },
+  {
+    tag: "SPECIAL RELATIVITY",
+    title: "The speed of light is invariant in all inertial frames",
+    desc: "Regardless of how fast an observer is moving, light traveling through a vacuum is always measured at exactly 299,792,458 m/s—requiring space and time to dilate."
+  },
+  {
+    tag: "NUMBER THEORY",
+    title: "Euclid's Algorithm systematically breaks down divisibility",
+    desc: "By expressing the larger number in terms of the smaller divisor and inspecting the remainder, we can recursively find the Greatest Common Divisor without trial and error."
+  }
+];
+
+let conceptIndex = 0;
+const nextConceptBtn = document.getElementById('nextConceptBtn');
+const conceptTag = document.getElementById('conceptTag');
+const conceptTitle = document.getElementById('conceptTitle');
+const conceptDesc = document.getElementById('conceptDesc');
+
+if (nextConceptBtn && conceptTitle && conceptDesc) {
+  nextConceptBtn.addEventListener('click', () => {
+    conceptIndex = (conceptIndex + 1) % CONCEPTS.length;
+    const item = CONCEPTS[conceptIndex];
+    if (conceptTag) conceptTag.textContent = item.tag;
+    conceptTitle.textContent = item.title;
+    conceptDesc.textContent = item.desc;
+  });
+}
+
+// ============================================================================
 // MOBILE NAVIGATION & UTILITIES
 // ============================================================================
 
