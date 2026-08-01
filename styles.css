@@ -490,6 +490,13 @@ a {
   line-height: 2;
 }
 
+/* Extra paragraph indent for alternating paragraphs to make text less condensed */
+.article-text p.indent,
+.article-text p.indented-p,
+.article-text div.indent {
+  padding-left: 28px;
+}
+
 .article-images {
   display: flex;
   flex-direction: column;
@@ -1235,5 +1242,11 @@ a.wip::after {
   .modal-header, .modal-body {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .article-text p.indent,
+  .article-text p.indented-p,
+  .article-text div.indent {
+    padding-left: 14px;
   }
 }

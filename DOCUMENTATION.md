@@ -44,6 +44,14 @@ To create a new article page (e.g., `eulers-formula.html`):
 4. Write your content inside `<div class="article-layout">` blocks as shown below.
 5. Add a link to your new article on the appropriate section page (`math.html`, `physics.html`, or `additional.html`).
 
+### Alternating Paragraph Indentation (`.indent`)
+To make longer paragraphs look less condensed, add `class="indent"` to every other paragraph or indented block:
+```html
+<p>First paragraph in the section...</p>
+<p class="indent">Second paragraph with extra left indent...</p>
+<p>Third paragraph in the section...</p>
+```
+
 ---
 
 ## 3. Spacing Images & Big Diagrams
