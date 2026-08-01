@@ -13,7 +13,9 @@ The framework is set up as minimal and basic as possible—no Node.js build tool
 4. [Writing Readable Math Equations](#4-writing-readable-math-equations)
 5. [Using the WIP Symbol for Unfinished Articles](#5-using-the-wip-symbol-for-unfinished-articles)
 6. [Managing Weekly Facts & Archive Popups](#6-managing-weekly-facts--archive-popups)
-7. [Workflow & Deploying Changes](#7-workflow--deploying-changes)
+7. [Homepage Widgets, Suggestion Email & Creator Profiles](#7-homepage-widgets-suggestion-email--creator-profiles)
+8. [Workflow & Deploying Changes](#8-workflow--deploying-changes)
+9. [Licensing](#9-licensing)
 
 ---
 
@@ -157,20 +159,37 @@ Relogify automatically pops up a modal on the homepage with the **latest weekly 
   "<span class='section-text-3'>1729</span> is the smallest number which can be expressed as the sum of two cubes in two different ways: <div class='math-equation'>1729 = 1³ + 12³ = 9³ + 10³</div> This number is known as the Hardy-Ramanujan number, or Ramanujan's Constant, named after the mathematicians G.H. Hardy and Srinivasa Ramanujan." July 30, 2026
   ```
 - To determine the **latest weekly fact**, the system checks the US date in the filename. For example, `7-30-26.txt` is displayed as the latest fact if there is no `7-31-26.txt` or beyond.
+- **Future-Date Release Scheduling:** You can schedule weekly facts for future weeks in advance! Simply name the file with the future release date (for example, `8-2-26.txt` for August 2, 2026). The site checks the filename date against the current local date—future scheduled facts remain hidden until their release date arrives.
 - **Don't Show Again:** In the automatic popup, users can check *"Don't show this weekly fact again"*. The system stores the latest filename in `localStorage` so it won't pop up again until a newer weekly fact file is published.
 
-### How to Add a New Weekly Fact
-1. Create a new text file inside `weekly-facts/` using US date format (e.g. `8-6-26.txt`).
-2. Inside `weekly-facts/8-6-26.txt`, write:
+### How to Add or Schedule a Weekly Fact
+1. Create a new text file inside `weekly-facts/` using US date format (e.g. `8-2-26.txt`).
+2. Inside `weekly-facts/8-2-26.txt`, write:
    ```text
-   "Your new fact text goes here" August 6, 2026
+   "Your new fact text goes here" August 2, 2026
    ```
-3. Open `weekly-facts/index.txt` and add your filename `8-6-26.txt` to the list.
-4. Save your files. When a reader visits the homepage, `8-6-26.txt` will automatically pop up as the newest fact! Older files remain in the **View History** archive and can be sorted chronologically.
+3. Open `weekly-facts/index.txt` and add your filename `8-2-26.txt` to the list.
+4. Save your files. When that release date arrives, `8-2-26.txt` will automatically release and become the newest fact! Older files remain in the **View History** archive and can be sorted chronologically.
 
 ---
 
-## 7. Workflow & Deploying Changes
+## 7. Homepage Widgets, Suggestion Email & Creator Profiles
+
+### Concept Explorer Widget
+The homepage features an interactive **Spark an Intuition &#9889;** widget that allows readers to cycle through curated conceptual summaries directly from published Relogify articles (such as `euclidean-algorithm.html` and `linear-algebra.html`), complete with a **Read Article &rarr;** link. Maintainers can add new excerpts to the `CONCEPTS` list in `script.js` as new articles are published.
+
+### Embedded Article Suggestion Email Card
+Readers can submit ideas via the embedded **Suggest an Article** card on `index.html`. Clicking **Email Suggestion** opens a pre-formatted email to `suggestions@relogify.vibeotter.com`.
+
+### Customizing Creator Profile Cards (Resumes & Portfolios)
+The **Creators & Contact** section on `index.html` features dedicated profile cards for Prajwal Sharma-Gaire and John Cummiskey.
+- **Photo Avatar:** To replace the placeholder logo with your photo, save your image to `images/` (e.g., `images/prajwal.jpg`) and change the `src` attribute in `.creator-avatar`.
+- **Bios & Role:** Update your paragraph inside `.creator-bio` to highlight your research, background, and academic focus.
+- **Resume & Portfolio Links:** Customize the `href` attributes on `.creator-btn` to point directly to your personal portfolio, LinkedIn, GitHub, or resume PDF.
+
+---
+
+## 8. Workflow & Deploying Changes
 
 Because Relogify uses no build steps, deploying changes is as simple as committing and pushing your files using Git:
 
@@ -193,6 +212,6 @@ When changes on the `dev` branch are reviewed and ready to go live, merge `dev` 
 
 ---
 
-## 8. Licensing
+## 9. Licensing
 
 Relogify is open-source software licensed under the **GNU Affero General Public License Version 3.0 (AGPL-3.0)**. See the `LICENSE` file in the root directory for full terms.
