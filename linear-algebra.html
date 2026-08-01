@@ -78,7 +78,7 @@
           </div>
         </div>
 
-        <!-- Section 2: “Abstract” Vector Space & Linearity -->
+        <!-- Section 2A: “Abstract” Vector Space -->
         <div class="article-layout">
           <div class="article-text">
             <p class="section-label-big">“Abstract” Vector Space</p>
@@ -105,6 +105,12 @@
             <p class="indent">
               The only issue with this is that at a high level, more pure math (less correlation to practical application, currently) uses addition a little more differently, as we will see with vector operations, and computing determinants.
             </p>
+          </div>
+        </div>
+
+        <!-- Section 2B: Linearity Geometric Rules & Diagram (Image 1) -->
+        <div class="article-layout">
+          <div class="article-text">
             <p>
               In a geometric sense, the formal rules of linearity state that all vectors in our vector space can only be changed in a restricted manner so that their transformed version can be expressed as adding and scaling the original vector. Only when this requirement is met, can a transformation be understood as a linear transformation.
             </p>
@@ -144,13 +150,19 @@
           </div>
         </div>
 
-        <!-- Section 4: Changing Space & Unit Square -->
+        <!-- Section 4A: Changing Space -->
         <div class="article-layout">
           <div class="article-text">
             <p class="section-label-big">Changing Space</p>
             <p>
               Imagine you’re playing around with this coordinate plane we’ve designed and you’re performing different linear transformations. You’ll realize every linear transformation other than two actions: rotation, and doing nothing {referred to as the identity matrix}, stretch space in some way. This is an important characteristic of what our vectors are doing. Lets mathematically describe this scaling of our coordinate plane by looking at the <span class="text-red">Unit Square</span>.
             </p>
+          </div>
+        </div>
+
+        <!-- Section 4B: Unit Square & Determinant (Image 2) -->
+        <div class="article-layout">
+          <div class="article-text">
             <p class="indent">
               The unit square has side lengths of i-hat, and j-hat.<br>
               i-hat is <span class="math-inline">1</span> unit distance away from the origin horizontally,<br>
@@ -171,7 +183,7 @@
           </div>
         </div>
 
-        <!-- Section 5: Measuring the Determinant -->
+        <!-- Section 5: Measuring the Determinant & Big Diagram (Image 3) -->
         <div class="article-layout">
           <div class="article-text">
             <p class="subheading-purple">Measuring the Determinant</p>
@@ -212,17 +224,17 @@
             <p>
               The most common Matrix Multiplication you often see computational wise is
             </p>
-            <p>
+            <p class="indent">
               <u class="text-red" style="text-decoration:underline;">Matrix Vector Multiplication.</u>
             </p>
-            <p class="indent">
+            <p>
               In short, you’re looking at the initial vector { which is usually on the right } and performing the linear transformation encoded by the matrix on the left of it. In traditional math equations, theres a section on the left and a section on the right of the equals sign.
             </p>
-            <p>
+            <p class="indent">
               We read each section left to right for order in traditional equations.<br>
               In equations involving matrices, it’s easier to read the sections from <span class="text-red">right to left</span>.
             </p>
-            <p class="indent">
+            <p>
               This is because when looking at transformations acting on our initial vector (always on the right), we perform the linear transformation which is directly attached to the initial vector first, and then the next linear transformation.
             </p>
             <div class="math-equation">B * A[x]</div>
