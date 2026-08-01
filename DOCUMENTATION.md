@@ -121,7 +121,7 @@ Relogify provides three image box sizing options:
 
 ## 4. Writing Readable Math Equations
 
-Mathematical equations on Relogify are styled using a clean, readable monospace font (`Roboto Mono`) so symbols, operators, and fractions are easy to read.
+To keep design syntax consistent across all articles so readers don't get confused, always wrap numbers, coordinates, matrices, and equations in the blue design notation classes (`.math-inline` for inline notation and `.math-equation` for standalone equation blocks). Both classes use a clean monospace font (`Roboto Mono`) with a blue border/box accent.
 
 ### Standalone Equation Blocks
 For equations that should appear on their own line with a highlight box and left border:
