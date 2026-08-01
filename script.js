@@ -234,28 +234,33 @@ window.addEventListener('DOMContentLoaded', () => {
 const CONCEPTS = [
   {
     tag: "LINEAR ALGEBRA",
-    title: "Determinants measure area scaling and orientation reversal",
-    desc: "In a 2x2 linear transformation, the determinant calculates how much the area of any region is scaled. A negative determinant indicates that space has been flipped like a mirror reflection."
-  },
-  {
-    tag: "COMPLEX NUMBERS",
-    title: "Euler's Identity connects five fundamental constants",
-    desc: "The equation e^(iπ) + 1 = 0 links exponential growth, rotation in the complex plane, and geometry into a single unified mathematical relationship."
-  },
-  {
-    tag: "TOPOLOGY",
-    title: "Why a doughnut and a coffee mug are homeomorphic",
-    desc: "In topology, objects can be continuously deformed without cutting or gluing. Because both a coffee mug and a torus have exactly one hole, they are topologically equivalent."
-  },
-  {
-    tag: "SPECIAL RELATIVITY",
-    title: "The speed of light is invariant in all inertial frames",
-    desc: "Regardless of how fast an observer is moving, light traveling through a vacuum is always measured at exactly 299,792,458 m/s—requiring space and time to dilate."
+    title: "Linearity preserves grid lines, origin, and geometric symmetry",
+    desc: "In a linear transformation, grid lines remain parallel and evenly spaced, and the origin never moves—allowing any transformed vector to be described by tracking basis vectors i-hat and j-hat.",
+    link: "linear-algebra.html"
   },
   {
     tag: "NUMBER THEORY",
-    title: "Euclid's Algorithm systematically breaks down divisibility",
-    desc: "By expressing the larger number in terms of the smaller divisor and inspecting the remainder, we can recursively find the Greatest Common Divisor without trial and error."
+    title: "Euclid's Algorithm systematically computes the Greatest Common Divisor",
+    desc: "By expressing the larger number in terms of the smaller divisor and inspecting the remainder (a = b * q + r), we can systematically repeat the division until the remainder is 0 without trial and error.",
+    link: "euclidean-algorithm.html"
+  },
+  {
+    tag: "LINEAR ALGEBRA",
+    title: "The determinant measures how much a transformation scales area",
+    desc: "By observing how the 1x1 Unit Square defined by basis vectors i-hat and j-hat changes after a transformation, the determinant determines the multiplier effect on any area in the plane.",
+    link: "linear-algebra.html"
+  },
+  {
+    tag: "NUMBER THEORY",
+    title: "Why the GCD of two numbers equals the GCD of divisor and remainder",
+    desc: "Because any divisor that divides both a and b must also divide their remainder r = a - b * q, the foundational building blocks of {a, b} and {b, r} are identical.",
+    link: "euclidean-algorithm.html"
+  },
+  {
+    tag: "LINEAR ALGEBRA",
+    title: "Why matrix multiplication is read from right to left",
+    desc: "When transformations act on an initial vector on the right, the transformation directly attached to the vector is performed first. Unlike basic numbers, matrix multiplication is not commutative.",
+    link: "linear-algebra.html"
   }
 ];
 
@@ -264,6 +269,7 @@ const nextConceptBtn = document.getElementById('nextConceptBtn');
 const conceptTag = document.getElementById('conceptTag');
 const conceptTitle = document.getElementById('conceptTitle');
 const conceptDesc = document.getElementById('conceptDesc');
+const conceptLink = document.getElementById('conceptLink');
 
 if (nextConceptBtn && conceptTitle && conceptDesc) {
   nextConceptBtn.addEventListener('click', () => {
@@ -272,6 +278,7 @@ if (nextConceptBtn && conceptTitle && conceptDesc) {
     if (conceptTag) conceptTag.textContent = item.tag;
     conceptTitle.textContent = item.title;
     conceptDesc.textContent = item.desc;
+    if (conceptLink) conceptLink.href = item.link;
   });
 }
 

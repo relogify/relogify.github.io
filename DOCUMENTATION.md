@@ -176,7 +176,7 @@ Relogify automatically pops up a modal on the homepage with the **latest weekly 
 ## 7. Homepage Widgets, Suggestion Email & Creator Profiles
 
 ### Concept Explorer Widget
-The homepage features an interactive **Spark an Intuition &#9889;** widget that allows readers to cycle through curated conceptual summaries of Linear Algebra, Topology, Relativity, and Number Theory.
+The homepage features an interactive **Spark an Intuition &#9889;** widget that allows readers to cycle through curated conceptual summaries directly from published Relogify articles (such as `euclidean-algorithm.html` and `linear-algebra.html`), complete with a **Read Article &rarr;** link. Maintainers can add new excerpts to the `CONCEPTS` list in `script.js` as new articles are published.
 
 ### Embedded Article Suggestion Email Card
 Readers can submit ideas via the embedded **Suggest an Article** card on `index.html`. Clicking **Email Suggestion** opens a pre-formatted email to `suggestions@relogify.vibeotter.com`.
