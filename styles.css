@@ -294,37 +294,40 @@ a {
 .subheading-purple,
 .article-text .subheading-purple,
 .article-text p.subheading-purple {
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.22rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: rgb(217, 195, 245);
-  margin-top: 24px;
-  margin-bottom: 12px;
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: rgb(217, 195, 245) !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  text-indent: 0 !important;
 }
 
 .subheading-red,
 .article-text .subheading-red,
 .article-text p.subheading-red {
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.22rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: rgba(231, 56, 94, 0.932);
-  margin-top: 24px;
-  margin-bottom: 12px;
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: rgba(231, 56, 94, 0.932) !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  text-indent: 0 !important;
 }
 
 .subheading-yellow,
 .article-text .subheading-yellow,
 .article-text p.subheading-yellow {
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.22rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: #ffd866;
-  margin-top: 24px;
-  margin-bottom: 12px;
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #ffd866 !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  text-indent: 0 !important;
 }
 
 .text-red,
@@ -363,25 +366,27 @@ a {
 .subheading-green,
 .article-text .subheading-green,
 .article-text p.subheading-green {
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.22rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: #69f0ae;
-  margin-top: 24px;
-  margin-bottom: 14px;
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #69f0ae !important;
+  margin-top: 28px !important;
+  margin-bottom: 14px !important;
+  text-indent: 0 !important;
 }
 
 .subheading-brown,
 .article-text .subheading-brown,
 .article-text p.subheading-brown {
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.22rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: #d7ccc8;
-  margin-top: 24px;
-  margin-bottom: 14px;
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #d7ccc8 !important;
+  margin-top: 28px !important;
+  margin-bottom: 14px !important;
+  text-indent: 0 !important;
 }
 
 .text-brown,
@@ -522,7 +527,7 @@ a {
   max-width: 580px;
 }
 
-.article-text p:not([class*="section-"]):not(.article-note) {
+.article-text p:not([class*="section-"]):not([class*="subheading-"]):not(.article-note) {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.04em;
