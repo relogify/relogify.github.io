@@ -60,7 +60,7 @@
             <p>
               In the <span class="math-inline">xy</span>-plane — called a Cartesian Coordinate System — imagine a point with coordinates <span class="math-inline">(3, 2)</span>. Decrypting this mathematical code means that there is a point located in the area where the lines <span class="math-inline">x = 3</span> and <span class="math-inline">y = 2</span> intersect. Imagine <span class="math-inline">x = 3</span> as a scaling of <span class="math-inline">x = 1</span>, 3 times. In other words, we can always write respective positions of points in terms of <span class="math-inline">x = 1</span> and <span class="math-inline">y = 1</span> by just counting how many times that distance from <span class="math-inline">x = 0</span> to <span class="math-inline">x = 1</span> has to be multiplied to get to the x-position the point is located at. Let’s do the same for y as well, to establish strict geometrical definitions for what it means to be located in our coordinate plane.
             </p>
-            <p class="indent">
+            <p>
               Now imagine this same point, but now we draw a line connecting the point to the origin, and make the tip of this line (the area where the point originally was) an arrow, to indicate the direction it’s going.
             </p>
             <p>
@@ -70,7 +70,7 @@
             <p class="article-note">
               Note: Whenever you see brackets <span class="math-inline">[a, b]</span>, just know that the numbers inside are positioned so that "a" is placed above "b".
             </p>
-            <p class="indent">
+            <p>
               Now recall that the location of these points are based on some fixed distance from the origin. Because this distance is going to be consistently one, let’s call it a unit distance — unit means 1 — so for our new mathematical objects, let's create fixed unit distances to be able to accurately describe this line going in a direction, by locating the end point.
             </p>
             <p>
@@ -86,7 +86,7 @@
             <p>
               All of these vectors and this coordinate plane all exist, right? Depends — they are called “abstract” objects because they really only live conceptually in our minds as a logical tool we use to solve some problems. Every mathematical object is abstract.
             </p>
-            <p class="indent">
+            <p>
               For example, you can’t point to the number 3. Any number is an abstract concept which implies it has some sort of generality to it. If I say 3, it could mean a list of things; it’s “generalized”.
             </p>
             <p>
@@ -97,19 +97,19 @@
             <p>
               Linearity, in linear algebra, provides the fundamental “axioms”. Everything in math works under some assumptions, some foundational thoughts, that we all hold to be true. These are called “axioms”.
             </p>
-            <p class="indent">
+            <p>
               2 + 2 can only equal 4 if addition is the counting of successor terms in a sequence, and 4 is the second successor to 2. These are obvious when we think about math in a practical sense — like I have 2 jars and then I’m given 2 more, so now I have 4.
             </p>
             <p>
               The only issue with this is that at a high level, more pure math (less correlation to practical application, currently) uses addition a little differently, as we will see with vector operations, and computing determinants.
             </p>
-            <p class="indent">
+            <p>
               In a geometric sense, the formal rules of linearity state that all vectors in our vector space can only be changed in a restricted manner so that their transformed version can be expressed as adding and scaling the original vector. Only when this requirement is met, can a transformation be understood as a linear transformation.
             </p>
             <p>
               That explanation is kind of vague, like what transformation wouldn’t be linear?
             </p>
-            <p class="indent">
+            <p>
               Well, an enforcing idea you can think about is the fact the grid lines on our coordinate plane should stay parallel to each other and evenly spaced. The space between them can change — which is really important for the determinant — but it can’t be <span class="text-red">uneven</span>. Additionally, the origin has to stay fixed in place, otherwise asymmetry shows up which is bad.
             </p>
             <p>
@@ -133,7 +133,7 @@
             <p>
               Points just tell you the location of one little spot in the coordinate plane, with an <span class="math-inline">x</span> and <span class="math-inline">y</span> coordinate: two bits of information.
             </p>
-            <p class="indent">
+            <p>
               Likewise, vectors have a given length (distance from the origin) which is referred to as its “magnitude”, and a “direction” which is where the arrow is pointing. Therefore we have two different bits of information. We are representing the same point with two different numbers. Vectors use magnitude/radius and direction/angle, so they’re graphed like they’re on the polar coordinate plane. Points use horizontal and vertical axes, so they’re graphed on the Cartesian coordinate plane.
             </p>
             <p>
@@ -149,7 +149,7 @@
             <p>
               Imagine you’re playing around with this coordinate plane we’ve designed and you’re performing different linear transformations. You’ll realize every linear transformation other than two actions — rotation, and doing nothing (referred to as the identity matrix) — stretches space in some way. This is an important characteristic of what our vectors are doing. Let's mathematically describe this scaling of our coordinate plane by looking at the <span class="text-red">Unit Square</span>.
             </p>
-            <p class="indent">
+            <p>
               The unit square has side lengths of <span class="text-yellow">i-hat</span> and <span class="text-yellow">j-hat</span>.<br>
               <span class="text-yellow">i-hat</span> is 1 unit distance away from the origin horizontally,<br>
               and <span class="text-yellow">j-hat</span> is 1 unit distance away vertically.
@@ -158,7 +158,7 @@
             <p>
               By measuring how the area of this unit square changes by <span class="text-green">some multiplier</span> as a result of a linear transformation (due to the laws of linearity, the unit square cannot be stretched asymmetrically, making calculating the area very easy):
             </p>
-            <p class="indent">
+            <p>
               This number that we’re measuring is called the <span class="text-green">determinant</span> of the linear transformation. It’s called that because it determines the effects that the linear transformation enacted on the vector coordinate plane.
             </p>
           </div>
@@ -178,14 +178,14 @@
             Any linear transformation can be represented by the position of the column vectors after the transformation. Recall earlier we represent 2D vectors as <span class="math-inline">[a, b]</span>.
           </p>
           <div class="math-equation">i-hat = [ 1 0 ],   j-hat = [ 0 1 ]</div>
-          <p class="indent">
+          <p>
             Combining these two vectors together we get a matrix:
           </p>
           <div class="math-equation">Identity Matrix = [ 1 0,  0 1 ]</div>
           <p>
             This is called the <span class="text-red">Identity Matrix</span> and it represents our coordinate plane in its standard position.
           </p>
-          <p class="indent">
+          <p>
             Assume a linear transformation produces the matrix <span class="math-inline">[ 3 0, 0 3 ]</span>. This means <span class="text-yellow">i-hat</span> is now located at <span class="math-inline">(3, 0)</span> and <span class="text-yellow">j-hat</span> at <span class="math-inline">(0, 3)</span>. The transformation scaled our coordinate plane by a factor of 3, so therefore the determinant of this matrix is 3.
           </p>
           <p>
@@ -201,7 +201,7 @@
           <p>
             As explained prior, observing more abstract mathematical dimensions means looking at more axes. For the third dimension we include the <span class="math-inline">z</span>-axis, with the basis vector known as <span class="text-yellow">k-hat</span>.
           </p>
-          <p class="indent">
+          <p>
             With each new dimension that we want to observe in the vector space, we represent that in mathematical notation by adding a new row to our matrix.
           </p>
           <p>
@@ -213,24 +213,24 @@
             The most common matrix multiplication you often see computationally is <span class="text-red">Matrix-Vector Multiplication</span>:
           </p>
           <div class="math-equation">v' = A * v</div>
-          <p class="indent">
+          <p>
             In short, you’re looking at the initial vector (which is usually on the right) and performing the linear transformation encoded by the matrix on the left of it. In traditional math equations, there's a section on the left and a section on the right of the equals sign.
           </p>
           <p>
             We read each section left to right for order in traditional equations.<br>
             In equations involving matrices, it’s easier to read the sections from <span class="text-red">right to left</span>.
           </p>
-          <p class="indent">
+          <p>
             This is because when looking at transformations acting on our initial vector (always on the right), we perform the linear transformation which is directly attached to the initial vector first, and then the next linear transformation:
           </p>
           <div class="math-equation">v' = B * A * x</div>
-          <p class="indent">
+          <p>
             where <span class="math-inline">B</span> and <span class="math-inline">A</span> are matrices encoding linear transformations, and <span class="math-inline">A</span> is always performed first.
           </p>
           <p>
             <span class="text-red">Matrix-Matrix Multiplication</span> is literally what I described above — performing a sequence of linear transformations in a specific order.
           </p>
-          <p class="indent">
+          <p>
             It’s important to know that the commutative property of multiplication does not apply in matrix operations (<span class="math-inline">A * B != B * A</span>). This is a fact which can be realized when pondering about how they’re defined and experimenting with linear transformations.
           </p>
 
