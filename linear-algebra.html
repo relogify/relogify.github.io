@@ -127,8 +127,8 @@
               – In theory, if you're curious, a nonlinear transformation is also able to be described mathematically { in a field like complex analysis with the Riemann Zeta}  but fundamentally more complicated than this class of linear transformations–
             </p>
           </div>
-          <div class="article-images medium">
-            <div class="article-img-box medium">
+          <div class="article-images">
+            <div class="article-img-box">
               <img src="images/linear-algebra-1.png" alt="Geometric representation of linear transformations and linearity">
             </div>
           </div>
@@ -176,88 +176,85 @@
               This number that we’re measuring is called the <span class="text-green">determinant</span> of the linear transformation. It’s called that because it determines the effects that the linear transformation enacted on the vector coordinate plane.
             </p>
           </div>
-          <div class="article-images medium">
-            <div class="article-img-box medium">
+          <div class="article-images">
+            <div class="article-img-box">
               <img src="images/linear-algebra-2.png" alt="Standard Unit Square (i, j) diagram showing basis vectors i = [1,0] and j = [0,1] and area 1">
             </div>
           </div>
         </div>
 
+        <br>
         <!-- Section 5: Measuring the Determinant & Big Diagram (Image 3) -->
-        <div class="article-layout">
-          <div class="article-text">
-            <p class="section-label-big">Measuring the Determinant</p>
-            <p>
-              To start, let’s represent linear transformations mathematically.<br><br>
-              Any linear transformation can be represented by the position of the column vectors after the transformation. Recall earlier we represent 2D vectors as <span class="math-inline">[a, b]</span>,<br><br>
-              So let's set <span class="math-inline">i-hat = [ 1 0 ]</span> and <span class="math-inline">j-hat = [ 0 1 ]</span>.
-            </p>
-            <p class="indent">
-              Combining these two vectors together we get a matrix:<br>
-              <span class="math-inline">[ 1 0, 0 1 ]</span> where the comma separates columns.<br><br>
-              This is called the <span class="text-red">Identity Matrix</span> and it represents our coordinate plane in its standard position.
-            </p>
-            <p>
-              Assume a Linear Transformation produces the matrix <span class="math-inline">[ 3 0, 0 3 ]</span> this means i-hat is now located at <span class="math-inline">(3, 0)</span> and j-hat at <span class="math-inline">(0, 3)</span>, the transformation scaled our coordinate plane by a factor of <span class="math-inline">3</span>, so therefore the “ determinant of this matrix “ is <span class="math-inline">3</span>.
-            </p>
-            <p class="indent">
-              A general formula can then be derived for a <span class="math-inline">2x2</span> matrix { which means a Linear Transformation affecting i-hat and j-hat in two dimensions} using geometry to find the area of the transformed unit square defined by i-hat and j-hat.
-            </p>
+        <div class="article-text">
+          <p class="section-label-big">Measuring the Determinant</p>
+          <p>
+            To start, let’s represent linear transformations mathematically.<br><br>
+            Any linear transformation can be represented by the position of the column vectors after the transformation. Recall earlier we represent 2D vectors as <span class="math-inline">[a, b]</span>,<br><br>
+            So let's set <span class="math-inline">i-hat = [ 1 0 ]</span> and <span class="math-inline">j-hat = [ 0 1 ]</span>.
+          </p>
+          <p class="indent">
+            Combining these two vectors together we get a matrix:<br>
+            <span class="math-inline">[ 1 0, 0 1 ]</span> where the comma separates columns.<br><br>
+            This is called the <span class="text-red">Identity Matrix</span> and it represents our coordinate plane in its standard position.
+          </p>
+          <p>
+            Assume a Linear Transformation produces the matrix <span class="math-inline">[ 3 0, 0 3 ]</span> this means i-hat is now located at <span class="math-inline">(3, 0)</span> and j-hat at <span class="math-inline">(0, 3)</span>, the transformation scaled our coordinate plane by a factor of <span class="math-inline">3</span>, so therefore the “ determinant of this matrix “ is <span class="math-inline">3</span>.
+          </p>
+          <p class="indent">
+            A general formula can then be derived for a <span class="math-inline">2x2</span> matrix { which means a Linear Transformation affecting i-hat and j-hat in two dimensions} using geometry to find the area of the transformed unit square defined by i-hat and j-hat.
+          </p>
 
-            <!-- Third image big -->
-            <div class="article-img-box big">
-              <img src="images/linear-algebra-3.png" alt="Origin of the 2x2 determinant formula: det(A) = ad - bc">
-            </div>
-
-            <p class="section-label-big">Higher Dimensional Space</p>
-            <p>
-              As explained prior, observing more abstract mathematical dimensions means looking at more axes. For the third dimension we include the z-axis, with the basis vector known as k-hat.
-            </p>
-            <p class="indent">
-              With each new dimension that we want to observe in the vector space, we represent that in mathematical notation by adding a new row to our matrix.
-            </p>
-            <p>
-              In short, more rows means more dimensions. We can have a matrix where we measure i-hat { first dimension basis vector } and j-hat { second dimension basis vector } in ten dimensions {referred to as a <span class="math-inline">2x10</span> matrix} but the <span class="math-inline">8</span> entries after the second dimension are always going to be <span class="math-inline">0</span> unless we perform <span class="text-red">matrix multiplication</span>
-            </p>
-
-            <p class="section-label-big">Matrices in Math Problems</p>
-            <p>
-              The most common Matrix Multiplication you often see computational wise is
-            </p>
-            <p class="indent">
-              <u class="text-red" style="text-decoration:underline;">Matrix Vector Multiplication.</u>
-            </p>
-            <p>
-              In short, you’re looking at the initial vector { which is usually on the right } and performing the linear transformation encoded by the matrix on the left of it. In traditional math equations, theres a section on the left and a section on the right of the equals sign.
-            </p>
-            <p class="indent">
-              We read each section left to right for order in traditional equations.<br>
-              In equations involving matrices, it’s easier to read the sections from <span class="text-red">right to left</span>.
-            </p>
-            <p>
-              This is because when looking at transformations acting on our initial vector (always on the right), we perform the linear transformation which is directly attached to the initial vector first, and then the next linear transformation.
-            </p>
-            <div class="math-equation">B * A[x]</div>
-            <p class="indent">
-              Where <span class="math-inline">B</span> and <span class="math-inline">A</span> are matrices encoding linear transformations. <span class="math-inline">A</span> is always performed first.
-            </p>
-            <p>
-              <u class="text-red" style="text-decoration:underline;">Matrix Matrix Multiplication</u>
-            </p>
-            <p class="indent">
-              is literally what I described above, it’s performing a sequence of linear transformations in a specific order.
-            </p>
-            <p>
-              It’s important to know that the commutative property of multiplication does not apply in matrix operations. This is a fact which can be realized when pondering about how they’re defined and messing around with linear transformations.
-            </p>
-
-            <!-- Bottom portion separated with space and grey small font -->
-            <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-              <p class="article-note">
-                I have covered the fundamental geometric concepts for basic linear algebra, however it’s important to note I haven’t touched on everything in standard linear algebra (and not to mention advanced linear algebra), so I will be coming back to make additions to this due to the amount of content a part of this.
-              </p>
-            </div>
+          <!-- Third image big -->
+          <div class="article-img-box big">
+            <img src="images/linear-algebra-3.png" alt="Origin of the 2x2 determinant formula: det(A) = ad - bc">
           </div>
+
+          <p class="section-label-big">Higher Dimensional Space</p>
+          <p>
+            As explained prior, observing more abstract mathematical dimensions means looking at more axes. For the third dimension we include the z-axis, with the basis vector known as k-hat.
+          </p>
+          <p class="indent">
+            With each new dimension that we want to observe in the vector space, we represent that in mathematical notation by adding a new row to our matrix.
+          </p>
+          <p>
+            In short, more rows means more dimensions. We can have a matrix where we measure i-hat { first dimension basis vector } and j-hat { second dimension basis vector } in ten dimensions {referred to as a <span class="math-inline">2x10</span> matrix} but the <span class="math-inline">8</span> entries after the second dimension are always going to be <span class="math-inline">0</span> unless we perform <span class="text-red">matrix multiplication</span>
+          </p>
+
+          <p class="section-label-big">Matrices in Math Problems</p>
+          <p>
+            The most common Matrix Multiplication you often see computational wise is
+          </p>
+          <p class="indent">
+            <u class="text-red" style="text-decoration:underline;">Matrix Vector Multiplication.</u>
+          </p>
+          <p>
+            In short, you’re looking at the initial vector { which is usually on the right } and performing the linear transformation encoded by the matrix on the left of it. In traditional math equations, theres a section on the left and a section on the right of the equals sign.
+          </p>
+          <p class="indent">
+            We read each section left to right for order in traditional equations.<br>
+            In equations involving matrices, it’s easier to read the sections from <span class="text-red">right to left</span>.
+          </p>
+          <p>
+            This is because when looking at transformations acting on our initial vector (always on the right), we perform the linear transformation which is directly attached to the initial vector first, and then the next linear transformation.
+          </p>
+          <div class="math-equation">B * A[x]</div>
+          <p class="indent">
+            Where <span class="math-inline">B</span> and <span class="math-inline">A</span> are matrices encoding linear transformations. <span class="math-inline">A</span> is always performed first.
+          </p>
+          <p>
+            <u class="text-red" style="text-decoration:underline;">Matrix Matrix Multiplication</u>
+          </p>
+          <p class="indent">
+            is literally what I described above, it’s performing a sequence of linear transformations in a specific order.
+          </p>
+          <p>
+            It’s important to know that the commutative property of multiplication does not apply in matrix operations. This is a fact which can be realized when pondering about how they’re defined and messing around with linear transformations.
+          </p>
+
+          <div class="divider"></div>
+          <p class="article-note">
+            I have covered the fundamental geometric concepts for basic linear algebra, however it’s important to note I haven’t touched on everything in standard linear algebra (and not to mention advanced linear algebra), so I will be coming back to make additions to this due to the amount of content a part of this.
+          </p>
         </div>
 
       </div>
