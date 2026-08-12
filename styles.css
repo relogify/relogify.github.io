@@ -237,8 +237,7 @@ a {
   font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: rgb(217, 195, 245);
   margin-top: 24px;
   margin-bottom: 14px;
@@ -296,27 +295,24 @@ a {
 .article-text .subheading-purple,
 .article-text p.subheading-purple {
   font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.22rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
   color: rgb(217, 195, 245);
   margin-top: 24px;
   margin-bottom: 12px;
-  padding-left: 28px;
 }
 
 .subheading-red,
 .article-text .subheading-red,
 .article-text p.subheading-red {
   font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.22rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.15em;
   color: rgba(231, 56, 94, 0.932);
   margin-top: 24px;
   margin-bottom: 12px;
-  padding-left: 28px;
 }
 
 .subheading-yellow,
@@ -325,12 +321,10 @@ a {
   font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: #ffd866;
   margin-top: 24px;
   margin-bottom: 12px;
-  padding-left: 28px;
 }
 
 .text-red,
@@ -372,8 +366,7 @@ a {
   font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: #69f0ae;
   margin-top: 24px;
   margin-bottom: 14px;
@@ -385,8 +378,7 @@ a {
   font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: #d7ccc8;
   margin-top: 24px;
   margin-bottom: 14px;
