@@ -342,6 +342,14 @@ a {
   color: rgba(231, 56, 94, 0.932);
 }
 
+.text-pink,
+.article-text .text-pink,
+.article-text span.text-pink {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #ff79c6;
+}
+
 .text-yellow,
 .article-text .text-yellow,
 .article-text span.text-yellow {
