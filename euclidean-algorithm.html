@@ -59,12 +59,13 @@
         <div class="article-layout">
           <div class="article-text">
             <p>
-              Imagine you're trying to find the </p> <p class="section-text-3">Greatest Common Divisor</p> 
-              <p class="article-text"> 
-              between two numbers: <span class="math-inline">{a, b}</span>. <br>
-              In mathematical notation this would be denoted as: <span class="math-inline">gcd(a, b)</span>.  <br><br>
-              You can plug this into a calculator and the result will always be a whole number greater than or equal to 1.
-              The Euclidean Algorithm is the standard systematic method for how this is computed.
+              Imagine you're trying to find the <span class="section-text-3">Greatest Common Divisor</span> between two numbers: <span class="math-inline">{a, b}</span>.
+            </p>
+            <p>
+              In mathematical notation this would be denoted as: <span class="math-inline">gcd(a, b)</span>.
+            </p>
+            <p>
+              You can plug this into a calculator and the result will always be a whole number greater than or equal to 1. The Euclidean Algorithm is the standard systematic method for how this is computed.
             </p>
           </div>
           <div class="article-images">
@@ -78,10 +79,13 @@
         <div class="article-layout">
           <div class="article-text">
             <p>
-              Lets look at an example: <span class="math-inline">gcd(15, 125)</span> . <br><br>
-              Here: <span class="math-inline">a = 125</span> and <span class="math-inline">b = 15</span>. <br> Do not get confused because of the order of the numbers; a will always be greater than b.
-              So we know the bigger number can be rexpressed in terms of the smaller number.
-              In this case:
+              Lets look at an example: <span class="math-inline">gcd(15, 125)</span>.
+            </p>
+            <p>
+              Here: <span class="math-inline">a = 125</span> and <span class="math-inline">b = 15</span>.
+            </p>
+            <p>
+              Do not get confused because of the order of the numbers; a will always be greater than b. So we know the bigger number can be rexpressed in terms of the smaller number. In this case:
             </p>
             <div class="math-equation">125 = 15 * 8 + 5</div>
           </div>
@@ -96,18 +100,18 @@
         <div class="article-layout">
           <div class="article-text">
             <p>
-              Now whats important to note is the divisor, and the remainder. The remainder (<span class="math-inline">5</span>) must be smaller
-              than the divisor, if it wasn't we could just simplify the remainder more.
-              <br> So taking this fact, we can express the divisor in terms of the remainder.
+              Now whats important to note is the divisor, and the remainder. The remainder (<span class="math-inline">5</span>) must be smaller than the divisor, if it wasn't we could just simplify the remainder more.
+            </p>
+            <p>
+              So taking this fact, we can express the divisor in terms of the remainder.
             </p>
             <div class="math-equation">15 = 5 * 3 + 0</div>
             <p>
-            Systematically, we can repeat this process until the remainder is 0. 
-            When the remainder is 0 that indicates that the smaller number (the divisor) has gone into the bigger number (the dividend) completely.
-            This systematic repetition is the computational application of Euclid's Algorithm.
-            <br><br> 
+              Systematically, we can repeat this process until the remainder is 0. When the remainder is 0 that indicates that the smaller number (the divisor) has gone into the bigger number (the dividend) completely. This systematic repetition is the computational application of Euclid's Algorithm.
             </p>
-            <p class="section-label"> I interchangeably use the name "Euclid" and "Euclidean" but both are referring to the same algorithm.</p>
+            <p class="section-label">
+              I interchangeably use the name "Euclid" and "Euclidean" but both are referring to the same algorithm.
+            </p>
           </div>
           <div class="article-images">
             <div class="article-img-box">
@@ -119,19 +123,20 @@
         <br>
         <!-- Section 4: Proof and Big Visual Diagram -->
         <div class="article-text">
-          <p class="section-label-big"> 
-            Proof
-          </p> 
-          <p class="section-text-3">The Greatest Common Divisor</p> <p class="article-text"> of our two original numbers <span class="math-inline">{a, b}</span> is the same as the GCD of <span class="math-inline">{b, r}</span>. 
-          <br>We can write the equation: </p>
+          <p class="section-label-big">Proof</p>
+          <p>
+            <span class="section-text-3">The Greatest Common Divisor</span> of our two original numbers <span class="math-inline">{a, b}</span> is the same as the GCD of <span class="math-inline">{b, r}</span>. We can write the equation:
+          </p>
           <div class="math-equation">a = (b * q) + r</div>
-          <p class="article-text">
-            where <span class="math-inline">q</span> is the quotient (a divided by b, rounded to a whole number) <br> and <span class="math-inline">r</span> is the remainder. <br><br>
+          <p class="no-indent">
+            where <span class="math-inline">q</span> is the quotient (a divided by b, rounded to a whole number) and <span class="math-inline">r</span> is the remainder.
+          </p>
+          <p>
             Divide the equation by any constant "<span class="math-inline">d</span>" to <span class="math-inline">a</span> or <span class="math-inline">b</span>, and you get:
           </p>
           <div class="math-equation">a/d = (b/d * q) + r/d</div>
-          <p class="article-text">
-            We can express <span class="math-inline">r</span> as <span class="math-inline">{ a - b*q }</span> by rearranging the original equation. <br> After grouping like terms and reorganization:
+          <p>
+            We can express <span class="math-inline">r</span> as <span class="math-inline">{ a - b*q }</span> by rearranging the original equation. After grouping like terms and reorganization:
           </p>
           <div class="math-equation">
             a/d = (b/d * q) + (a - b*q)/d <br>
@@ -139,7 +144,7 @@
             a/d - a/d = (b/d * q) - b*q/d <br>
             0 = 0
           </div>
-          <p class="article-text">
+          <p>
             This shows that the GCD of <span class="math-inline">{a, b}</span> is the same as the GCD of <span class="math-inline">{b, r}</span>, as they are the foundational building blocks of the same two numbers.
           </p>
 

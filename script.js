@@ -230,6 +230,9 @@ document.addEventListener('click', (e) => {
   if (e.target === latestFactModal) {
     dismissLatestFactModal();
   }
+  if (e.target === donationModal) {
+    donationModal.classList.remove('open');
+  }
 });
 
 // Close modals on Escape key press
@@ -241,8 +244,42 @@ document.addEventListener('keydown', (e) => {
     if (latestFactModal && latestFactModal.classList.contains('open')) {
       dismissLatestFactModal();
     }
+    if (donationModal && donationModal.classList.contains('open')) {
+      donationModal.classList.remove('open');
+    }
   }
 });
+
+// ============================================================================
+// DONATIONS POPUP MODAL LOGIC
+// ============================================================================
+
+const donationModal = document.getElementById('donationModal');
+const closeDonationModal = document.getElementById('closeDonationModal');
+const closeDonationActionBtn = document.getElementById('closeDonationActionBtn');
+
+document.querySelectorAll('.donation-button').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (donationModal) {
+      donationModal.classList.add('open');
+    } else {
+      alert("We appreciate your support, but we don't have a donations page set up yet. Please come again later to see if we have one up then!");
+    }
+  });
+});
+
+if (closeDonationModal && donationModal) {
+  closeDonationModal.addEventListener('click', () => {
+    donationModal.classList.remove('open');
+  });
+}
+
+if (closeDonationActionBtn && donationModal) {
+  closeDonationActionBtn.addEventListener('click', () => {
+    donationModal.classList.remove('open');
+  });
+}
 
 // Run check on page load
 window.addEventListener('DOMContentLoaded', () => {

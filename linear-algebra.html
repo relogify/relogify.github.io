@@ -58,67 +58,65 @@
           <div class="article-text">
             <p class="section-label-big">A New Coordinate System</p>
             <p>
-              In the xy-plane –called a Cartesian Coordinate System–  imagine a point with coordinates (3,2). Decrypting this mathematical code means that there is a point {indicated by the parentheses} located in the area where the line x=3 and y=2 intersect. Imagine x=3 as a scaling of {x=1}, 3 times. In other words, we can always write respective positions of points in terms of {x=1} and {y=1} by just counting how many times that distance from x=0 to x=1 has to be multiplied to get to the x-position the point is located at. Let’s do the same for y as well, to establish strict geometrical definitions for what it means to be located in our coordinate plane.
+              In the <span class="math-inline">xy</span>-plane — called a Cartesian Coordinate System — imagine a point with coordinates <span class="math-inline">(3, 2)</span>. Decrypting this mathematical code means that there is a point located in the area where the lines <span class="math-inline">x = 3</span> and <span class="math-inline">y = 2</span> intersect. Imagine <span class="math-inline">x = 3</span> as a scaling of <span class="math-inline">x = 1</span>, 3 times. In other words, we can always write respective positions of points in terms of <span class="math-inline">x = 1</span> and <span class="math-inline">y = 1</span> by just counting how many times that distance from <span class="math-inline">x = 0</span> to <span class="math-inline">x = 1</span> has to be multiplied to get to the x-position the point is located at. Let’s do the same for y as well, to establish strict geometrical definitions for what it means to be located in our coordinate plane.
             </p>
             <p>
-              Now imagine this same point but now we draw a line connecting the point to the origin, and make the tip of this line (the area where the point originally was) an arrow, to indicate the direction it’s going.
+              Now imagine this same point, but now we draw a line connecting the point to the origin, and make the tip of this line (the area where the point originally was) an arrow, to indicate the direction it’s going.
             </p>
             <p>
-              This is a new mathematical object and therefore let’s use [] these brackets, to replace the parentheses and instead of writing [3,2] horizontally, let’s write it vertically.
+              This is a new mathematical object and therefore let’s use brackets <span class="math-inline">[ ]</span> to replace the parentheses, and instead of writing <span class="math-inline">[3, 2]</span> horizontally, let’s write it vertically:
             </p>
+            <div class="math-equation">v = [ 3, 2 ]</div>
             <p class="article-note">
-              <em>I can’t actually type the numbers vertically, so whenever you see brackets [a,b], just know that the numbers inside are positioned so the first one “a” is positioned above “b”.</em>
+              Note: Whenever you see brackets <span class="math-inline">[a, b]</span>, just know that the numbers inside are positioned so that "a" is placed above "b".
             </p>
             <p>
-              Now recall that the location of these points are based on some fixed distance from the origin, because this distance is going to be consistently one, let’s call it a unit distance – unit means 1– So for our new mathematical objects, let's create fixed unit distances to be able to accurately describe this line going in a direction, by locating the end point.
+              Now recall that the location of these points are based on some fixed distance from the origin. Because this distance is going to be consistently one, let’s call it a unit distance — unit means 1 — so for our new mathematical objects, let's create fixed unit distances to be able to accurately describe this line going in a direction, by locating the end point.
             </p>
             <p>
-              This pointy line, we’ll call a <span class="text-red">vector</span>, instead of a point. Then while we’re naming things, let’s call that fixed distance from the origin to x=1, “<span class="text-yellow">i-hat</span>”. Then that fixed distance from the origin to y=1, “<span class="text-yellow">j-hat</span>”. The geometrical essence of doing this allows us to describe any vector in our coordinate system in terms of these “basis vectors” i-hat, and j-hat. Essentially, we can describe what the entire coordinate plane – which is composed of every possible vector– does by just tracking these basis vectors, as they change, or transform.
+              This pointy line, we’ll call a <span class="text-red">vector</span>, instead of a point. Then while we’re naming things, let’s call that fixed distance from the origin along the x-axis, “<span class="text-yellow">i-hat</span>”. Then that fixed distance along the y-axis, “<span class="text-yellow">j-hat</span>”. The geometrical essence of doing this allows us to describe any vector in our coordinate system in terms of these “basis vectors” <span class="text-yellow">i-hat</span> and <span class="text-yellow">j-hat</span>. Essentially, we can describe what the entire coordinate plane — which is composed of every possible vector — does by just tracking these basis vectors as they change, or transform.
             </p>
           </div>
         </div>
 
-        <!-- Section 2: “Abstract” Vector Space & Linearity -->
+        <!-- Section 2: Abstract Vector Space & Linearity -->
         <div class="article-layout">
           <div class="article-text">
             <p class="section-label-big">“Abstract” Vector Space</p>
             <p>
-              All of these vectors and this coordinate plane all exists, right? Depends, they are called “abstract” objects because they really only live conceptually in our minds as a logical tool we use to solve some problems. Every mathematical object is abstract.
+              All of these vectors and this coordinate plane all exist, right? Depends — they are called “abstract” objects because they really only live conceptually in our minds as a logical tool we use to solve some problems. Every mathematical object is abstract.
             </p>
             <p>
-              For example, you can’t point to the number 3. Any number is an abstract concept which implies it has some sort of generality to it. If I say 3, it could mean a list of things, it’s “generalized”.
+              For example, you can’t point to the number 3. Any number is an abstract concept which implies it has some sort of generality to it. If I say 3, it could mean a list of things; it’s “generalized”.
             </p>
             <p>
-              Our vectors are also an abstract tool, and we can do a list of things with them, they’re all generalized under the idea of “<span class="text-red">Linear Transformations</span>”.
+              Our vectors are also an abstract tool, and we can do a list of things with them; they’re all generalized under the idea of “<span class="text-red">Linear Transformations</span>”.
             </p>
 
-            <p class="subheading-red">Isn’t linearity like the quality of being a line??</p>
+            <p class="section-label-big">Isn’t Linearity Like Being a Line?</p>
             <p>
-              Linearity, in linear algebra, provides the fundamental “axioms”.
+              Linearity, in linear algebra, provides the fundamental “axioms”. Everything in math works under some assumptions, some foundational thoughts, that we all hold to be true. These are called “axioms”.
             </p>
             <p>
-              Everything in math, works under some assumptions, some foundational thoughts, that we all hold to be true. These are called “axioms”.
+              2 + 2 can only equal 4 if addition is the counting of successor terms in a sequence, and 4 is the second successor to 2. These are obvious when we think about math in a practical sense — like I have 2 jars and then I’m given 2 more, so now I have 4.
             </p>
             <p>
-              2 + 2 can only equal 4, if addition is the counting of successor terms in a sequence, and 4 is the second successor to 2. These are obvious when we think about math in a practical sense; like I have 2 jars and then I’m given 2 more, so now I have 4.
-            </p>
-            <p>
-              The only issue with this is that at a high level, more pure math (less correlation to practical application, currently) uses addition a little more differently, as we will see with vector operations, and computing determinants.
+              The only issue with this is that at a high level, more pure math (less correlation to practical application, currently) uses addition a little differently, as we will see with vector operations, and computing determinants.
             </p>
             <p>
               In a geometric sense, the formal rules of linearity state that all vectors in our vector space can only be changed in a restricted manner so that their transformed version can be expressed as adding and scaling the original vector. Only when this requirement is met, can a transformation be understood as a linear transformation.
             </p>
             <p>
-              That explanation is kind of vague, like what transformation wouldn’t be linear??
+              That explanation is kind of vague, like what transformation wouldn’t be linear?
             </p>
             <p>
-              Well, an enforcing idea you can think about is the fact the grid lines on our coordinate plane should stay parallel to each other and evenly spaced. The space between them can change – which is really important for the determinant – but it can’t be <u class="text-red" style="text-decoration:underline;">uneven</u>. Additionally, the origin has to stay fixed in place, otherwise asymmetry shows up which is bad.
+              Well, an enforcing idea you can think about is the fact the grid lines on our coordinate plane should stay parallel to each other and evenly spaced. The space between them can change — which is really important for the determinant — but it can’t be <span class="text-red">uneven</span>. Additionally, the origin has to stay fixed in place, otherwise asymmetry shows up which is bad.
             </p>
             <p>
-              Linearity gets its name from a foundational symmetry preserving behavior of everything which is deemed “linear”. This preservation of geometric symmetry is what allows us to be able to mathematically describe each action we make, only if it’s symmetrical.
+              Linearity gets its name from a foundational symmetry-preserving behavior of everything which is deemed “linear”. This preservation of geometric symmetry is what allows us to be able to mathematically describe each action we make, only if it’s symmetrical.
             </p>
             <p class="article-note">
-              – In theory, if you're curious, a nonlinear transformation is also able to be described mathematically { in a field like complex analysis with the Riemann Zeta}  but fundamentally more complicated than this class of linear transformations–
+              In theory, if you're curious, a nonlinear transformation is also able to be described mathematically (in a field like complex analysis with the Riemann Zeta function) but is fundamentally more complicated than this class of linear transformations.
             </p>
           </div>
           <div class="article-images">
@@ -133,13 +131,13 @@
           <div class="article-text">
             <p class="section-label-big">Vectors vs. Points</p>
             <p>
-              Points just tell you the location of one little spot in the coordinate plane, with an x and y coordinate: two bits of information.
+              Points just tell you the location of one little spot in the coordinate plane, with an <span class="math-inline">x</span> and <span class="math-inline">y</span> coordinate: two bits of information.
             </p>
             <p>
-              Likewise, vectors have a given length, (distance from the origin) which is referred to as its “magnitude”, and a “direction” which is where the arrow is pointing. Therefore we have two different bits of information. We are representing the same point with two different numbers. Vectors use magnitude/radius and direction/angle, so they’re graphed like they’re on the polar coordinate plane. Points use horizontal and vertical axis, so they’re graphed on the cartesian coordinate plane.
+              Likewise, vectors have a given length (distance from the origin) which is referred to as its “magnitude”, and a “direction” which is where the arrow is pointing. Therefore we have two different bits of information. We are representing the same point with two different numbers. Vectors use magnitude/radius and direction/angle, so they’re graphed like they’re on the polar coordinate plane. Points use horizontal and vertical axes, so they’re graphed on the Cartesian coordinate plane.
             </p>
             <p>
-              Vectors tell us a lot more about linear transformations. For example, let’s say a transformation rotates the basis vectors by 90 degrees counter-clockwise. This tells us that every vector will have to point in a direction 90 degrees counter-clockwise from where it originally was pointing, therefore we can prove that the entire vector space… rotates 90 degrees counter-clockwise.
+              Vectors tell us a lot more about linear transformations. For example, let’s say a transformation rotates the basis vectors by <span class="math-inline">90°</span> counter-clockwise. This tells us that every vector will have to point in a direction <span class="math-inline">90°</span> counter-clockwise from where it originally was pointing, therefore we can prove that the entire vector space… rotates <span class="math-inline">90°</span> counter-clockwise.
             </p>
           </div>
         </div>
@@ -149,16 +147,16 @@
           <div class="article-text">
             <p class="section-label-big">Changing Space</p>
             <p>
-              Imagine you’re playing around with this coordinate plane we’ve designed and you’re performing different linear transformations. You’ll realize every linear transformation other than two actions: rotation, and doing nothing {referred to as the identity matrix}, stretch space in some way. This is an important characteristic of what our vectors are doing. Lets mathematically describe this scaling of our coordinate plane by looking at the <span class="text-red">Unit Square</span>.
+              Imagine you’re playing around with this coordinate plane we’ve designed and you’re performing different linear transformations. You’ll realize every linear transformation other than two actions — rotation, and doing nothing (referred to as the identity matrix) — stretches space in some way. This is an important characteristic of what our vectors are doing. Let's mathematically describe this scaling of our coordinate plane by looking at the <span class="text-red">Unit Square</span>.
             </p>
             <p>
-              The unit square has side lengths of i-hat, and j-hat.<br>
-              i-hat is 1 unit distance away from the origin horizontally,<br>
-              and j-hat is 1 unit distance away vertically.<br><br>
-              The area of the unit square can then be calculated as 1 x 1, which is 1.
+              The unit square has side lengths of <span class="text-yellow">i-hat</span> and <span class="text-yellow">j-hat</span>.<br>
+              <span class="text-yellow">i-hat</span> is 1 unit distance away from the origin horizontally,<br>
+              and <span class="text-yellow">j-hat</span> is 1 unit distance away vertically.
             </p>
+            <div class="math-equation">Area = 1 * 1 = 1</div>
             <p>
-              By measuring how the area of this unit square changes by <span class="text-green">some multiplier</span> as a result of a linear transformation { due to the laws of linearity, the unit square cannot be stretched asymmetrically, therefore calculating the area becomes very easy }
+              By measuring how the area of this unit square changes by <span class="text-green">some multiplier</span> as a result of a linear transformation (due to the laws of linearity, the unit square cannot be stretched asymmetrically, making calculating the area very easy):
             </p>
             <p>
               This number that we’re measuring is called the <span class="text-green">determinant</span> of the linear transformation. It’s called that because it determines the effects that the linear transformation enacted on the vector coordinate plane.
@@ -171,81 +169,75 @@
           </div>
         </div>
 
-        <!-- Section 5: Measuring the Determinant -->
-        <div class="article-layout">
-          <div class="article-text">
-            <p class="subheading-purple">Measuring the Determinant</p>
-            <p>
-              To start, let’s represent linear transformations mathematically.<br><br>
-              Any linear transformation can be represented by the position of the column vectors after the transformation. Recall earlier we represent 2D vectors as <span class="math-inline">[a, b]</span>,<br><br>
-              So let's set <span class="math-inline">i-hat = [ 1 0 ]</span> and <span class="math-inline">j-hat = [ 0 1 ]</span>.
-            </p>
-            <p>
-              Combining these two vectors together we get a matrix:<br>
-              <span class="math-inline">[ 1 0, 0 1 ]</span> where the comma separates columns.<br><br>
-              This is called the <span class="text-red">Identity Matrix</span> and it represents our coordinate plane in its standard position.
-            </p>
-            <p>
-              Assume a Linear Transformation produces the matrix <span class="math-inline">[ 3 0, 0 3 ]</span> this means i-hat is now located at (3,0) and j-hat at (0,3), the transformation scaled our coordinate plane by a factor of three, so therefore the “ determinant of this matrix “ is 3.
-            </p>
-            <p>
-              A general formula can then be derived for a 2x2 matrix { which means a Linear Transformation affecting i-hat and j-hat in two dimensions} using geometry to find the area of the transformed unit square defined by i-hat and j-hat.
-            </p>
+        <br>
+        <!-- Section 5: Measuring the Determinant, Big Diagram & Matrices -->
+        <div class="article-text">
+          <p class="section-label-big">Measuring the Determinant</p>
+          <p>
+            To start, let’s represent linear transformations mathematically.<br><br>
+            Any linear transformation can be represented by the position of the column vectors after the transformation. Recall earlier we represent 2D vectors as <span class="math-inline">[a, b]</span>.
+          </p>
+          <div class="math-equation">i-hat = [ 1 0 ],   j-hat = [ 0 1 ]</div>
+          <p>
+            Combining these two vectors together we get a matrix:
+          </p>
+          <div class="math-equation">Identity Matrix = [ 1 0,  0 1 ]</div>
+          <p>
+            This is called the <span class="text-red">Identity Matrix</span> and it represents our coordinate plane in its standard position.
+          </p>
+          <p>
+            Assume a linear transformation produces the matrix <span class="math-inline">[ 3 0, 0 3 ]</span>. This means <span class="text-yellow">i-hat</span> is now located at <span class="math-inline">(3, 0)</span> and <span class="text-yellow">j-hat</span> at <span class="math-inline">(0, 3)</span>. The transformation scaled our coordinate plane by a factor of 3, so therefore the determinant of this matrix is 3.
+          </p>
+          <p>
+            A general formula can then be derived for a <span class="math-inline">2 * 2</span> matrix (which means a linear transformation affecting <span class="text-yellow">i-hat</span> and <span class="text-yellow">j-hat</span> in two dimensions) using geometry to find the area of the transformed unit square defined by <span class="text-yellow">i-hat</span> and <span class="text-yellow">j-hat</span>.
+          </p>
 
-            <!-- Third image big -->
-            <div class="article-img-box big">
-              <img src="images/linear-algebra-3.png" alt="Origin of the 2x2 determinant formula: det(A) = ad - bc">
-            </div>
-
-            <p class="subheading-purple">Higher Dimensional Space</p>
-            <p>
-              As explained prior, observing more abstract mathematical dimensions means looking at more axes. For the third dimension we include the z-axis, with the basis vector known as k-hat.
-            </p>
-            <p>
-              With each new dimension that we want to observe in the vector space, we represent that in mathematical notation by adding a new row to our matrix.
-            </p>
-            <p>
-              In short, more rows means more dimensions. We can have a matrix where we measure i-hat { first dimension basis vector } and j-hat { second dimension basis vector } in ten dimensions {referred to as a 2x10 matrix} but the 8 entries after the second dimension are always going to be 0 unless we perform <span class="text-red">matrix multiplication</span>
-            </p>
-
-            <p class="subheading-yellow">Matrices in Math Problems</p>
-            <p>
-              The most common Matrix Multiplication you often see computational wise is
-            </p>
-            <p>
-              <u class="text-red" style="text-decoration:underline;">Matrix Vector Multiplication.</u>
-            </p>
-            <p>
-              In short, you’re looking at the initial vector { which is usually on the right } and performing the linear transformation encoded by the matrix on the left of it. In traditional math equations, theres a section on the left and a section on the right of the equals sign.
-            </p>
-            <p>
-              We read each section left to right for order in traditional equations.<br>
-              In equations involving matrices, it’s easier to read the sections from <span class="text-red">right to left</span>.
-            </p>
-            <p>
-              This is because when looking at transformations acting on our initial vector (always on the right), we perform the linear transformation which is directly attached to the initial vector first, and then the next linear transformation.
-            </p>
-            <div class="math-equation">B * A[x]</div>
-            <p>
-              Where B and A are matrices encoding linear transformations. A is always performed first.
-            </p>
-            <p>
-              <u class="text-red" style="text-decoration:underline;">Matrix Matrix Multiplication</u>
-            </p>
-            <p>
-              is literally what I described above, it’s performing a sequence of linear transformations in a specific order.
-            </p>
-            <p>
-              It’s important to know that the commutative property of multiplication does not apply in matrix operations. This is a fact which can be realized when pondering about how they’re defined and messing around with linear transformations.
-            </p>
-
-            <!-- Bottom portion separated with space and grey small font -->
-            <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-              <p class="article-note">
-                I have covered the fundamental geometric concepts for basic linear algebra, however it’s important to note I haven’t touched on everything in standard linear algebra (and not to mention advanced linear algebra), so I will be coming back to make additions to this due to the amount of content a part of this.
-              </p>
-            </div>
+          <!-- Third image big -->
+          <div class="article-img-box big">
+            <img src="images/linear-algebra-3.png" alt="Origin of the 2x2 determinant formula: det(A) = ad - bc">
           </div>
+
+          <p class="section-label-big">Higher Dimensional Space</p>
+          <p>
+            As explained prior, observing more abstract mathematical dimensions means looking at more axes. For the third dimension we include the <span class="math-inline">z</span>-axis, with the basis vector known as <span class="text-yellow">k-hat</span>.
+          </p>
+          <p>
+            With each new dimension that we want to observe in the vector space, we represent that in mathematical notation by adding a new row to our matrix.
+          </p>
+          <p>
+            In short, more rows means more dimensions. We can have a matrix where we measure <span class="text-yellow">i-hat</span> (first dimension basis vector) and <span class="text-yellow">j-hat</span> (second dimension basis vector) in ten dimensions (referred to as a <span class="math-inline">2 * 10</span> matrix), but the 8 entries after the second dimension are always going to be 0 unless we perform <span class="text-red">matrix multiplication</span>.
+          </p>
+
+          <p class="section-label-big">Matrices in Math Problems</p>
+          <p>
+            The most common matrix multiplication you often see computationally is <span class="text-red">Matrix-Vector Multiplication</span>:
+          </p>
+          <div class="math-equation">v' = A * v</div>
+          <p>
+            In short, you’re looking at the initial vector (which is usually on the right) and performing the linear transformation encoded by the matrix on the left of it. In traditional math equations, there's a section on the left and a section on the right of the equals sign.
+          </p>
+          <p>
+            We read each section left to right for order in traditional equations.<br>
+            In equations involving matrices, it’s easier to read the sections from <span class="text-red">right to left</span>.
+          </p>
+          <p>
+            This is because when looking at transformations acting on our initial vector (always on the right), we perform the linear transformation which is directly attached to the initial vector first, and then the next linear transformation:
+          </p>
+          <div class="math-equation">v' = B * A * x</div>
+          <p class="no-indent">
+            where <span class="math-inline">B</span> and <span class="math-inline">A</span> are matrices encoding linear transformations, and <span class="math-inline">A</span> is always performed first.
+          </p>
+          <p>
+            <span class="text-red">Matrix-Matrix Multiplication</span> is literally what I described above — performing a sequence of linear transformations in a specific order.
+          </p>
+          <p>
+            It’s important to know that the commutative property of multiplication does not apply in matrix operations (<span class="math-inline">A * B != B * A</span>). This is a fact which can be realized when pondering about how they’re defined and experimenting with linear transformations.
+          </p>
+
+          <div class="divider"></div>
+          <p class="article-note">
+            Note: This page covers fundamental geometric concepts for basic linear algebra. Additional sections on matrix inversion, eigenvectors, and eigenvalues will be added in future updates.
+          </p>
         </div>
 
       </div>

@@ -44,6 +44,20 @@ To create a new article page (e.g., `eulers-formula.html`):
 4. Write your content inside `<div class="article-layout">` blocks as shown below.
 5. Add a link to your new article on the appropriate section page (`math.html`, `physics.html`, or `additional.html`).
 
+### Alternating Paragraph Indentation (`.indent`)
+To make longer paragraphs look less condensed, add `class="indent"` to every other paragraph or indented block:
+```html
+<p>First paragraph in the section...</p>
+<p class="indent">Second paragraph with extra left indent...</p>
+<p>Third paragraph in the section...</p>
+```
+
+### Indented Colored Subheadings
+For smaller subheadings inside article sections (such as *Isn't linearity like the quality of being a line??*), use `.subheading-red` (pink/red), `.subheading-purple` (lavender), or `.subheading-yellow` (yellow). These subheadings are automatically indented 28px to align with indented paragraphs:
+```html
+<p class="subheading-red">Isn’t linearity like the quality of being a line??</p>
+```
+
 ---
 
 ## 3. Spacing Images & Big Diagrams
@@ -83,22 +97,31 @@ Instead of grouping all images at the bottom of the page, split your article int
 </div>
 ```
 
-### Making an Image Big (e.g., Proof Diagrams)
-When you have a detailed visual diagram or geometric proof that needs more width than a side image, use the `big` modifier class on the image box:
+### Sizing Images (Standard, Medium, and Big)
+Relogify provides three image box sizing options:
+- **Standard Image Box (`.article-img-box`)**: 280px wide (default size for small side diagrams).
+- **Medium Image Box (`.article-images.medium > .article-img-box.medium`)**: 380px wide (ideal for labeled diagrams like Linearity and the Standard Unit Square).
+- **Big Image Box (`.article-img-box.big`)**: Expands up to 720px wide across the full column width (ideal for comprehensive proofs and concept diagrams).
 
 ```html
-<div class="article-img-box big">
-  <img src="images/euclid_algorithm-3.png" alt="Geometric proof diagram">
+<!-- Medium Image Box Example -->
+<div class="article-layout">
+  <div class="article-text">
+    <p>Explanation text...</p>
+  </div>
+  <div class="article-images medium">
+    <div class="article-img-box medium">
+      <img src="images/linear-algebra-1.png" alt="Linearity diagram">
+    </div>
+  </div>
 </div>
 ```
-- Standard image box (`.article-img-box`): 280px × 210px (sits to the right of text).
-- Big image box (`.article-img-box.big`): Expands up to 720px wide with responsive height.
 
 ---
 
 ## 4. Writing Readable Math Equations
 
-Mathematical equations on Relogify are styled using a clean, readable monospace font (`Roboto Mono`) so symbols, operators, and fractions are easy to read.
+To keep design syntax consistent across all articles so readers don't get confused, always wrap numbers, coordinates, matrices, and equations in the blue design notation classes (`.math-inline` for inline notation and `.math-equation` for standalone equation blocks). Both classes use a clean monospace font (`Roboto Mono`) with a blue border/box accent.
 
 ### Standalone Equation Blocks
 For equations that should appear on their own line with a highlight box and left border:
@@ -179,7 +202,7 @@ Relogify automatically pops up a modal on the homepage with the **latest weekly 
 The homepage features an interactive **Spark an Intuition &#9889;** widget that allows readers to cycle through curated conceptual summaries directly from published Relogify articles (such as `euclidean-algorithm.html` and `linear-algebra.html`), complete with a **Read Article &rarr;** link. Maintainers can add new excerpts to the `CONCEPTS` list in `script.js` as new articles are published.
 
 ### Embedded Article Suggestion Email Card
-Readers can submit ideas via the embedded **Suggest an Article** card on `index.html`. Clicking **Email Suggestion** opens a pre-formatted email to `suggestions@relogify.vibeotter.com`.
+Readers can submit ideas via the embedded **Suggest an Article** card on `index.html`. Clicking **Email Suggestion** opens a pre-formatted email to `suggestions@example.com`.
 
 ### Customizing Creator Profile Cards (Resumes & Portfolios)
 The **Creators & Contact** section on `index.html` features dedicated profile cards for Prajwal Sharma-Gaire and John Cummiskey.

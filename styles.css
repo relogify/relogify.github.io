@@ -227,7 +227,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.30);
   margin-bottom: 10px;
 }
 
@@ -237,10 +237,10 @@ a {
   font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: rgb(217, 195, 245);
-  margin-bottom: 10px;
+  margin-top: 24px;
+  margin-bottom: 14px;
 }
 
 .section-text {
@@ -294,39 +294,40 @@ a {
 .subheading-purple,
 .article-text .subheading-purple,
 .article-text p.subheading-purple {
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgb(217, 195, 245);
-  margin-top: 24px;
-  margin-bottom: 12px;
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: rgb(217, 195, 245) !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  text-indent: 0 !important;
 }
 
 .subheading-red,
 .article-text .subheading-red,
 .article-text p.subheading-red {
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: rgba(231, 56, 94, 0.932);
-  margin-top: 24px;
-  margin-bottom: 12px;
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: rgba(231, 56, 94, 0.932) !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  text-indent: 0 !important;
 }
 
 .subheading-yellow,
 .article-text .subheading-yellow,
 .article-text p.subheading-yellow {
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-size: 1.22rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #ffd866;
-  margin-top: 24px;
-  margin-bottom: 12px;
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #ffd866 !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  text-indent: 0 !important;
 }
 
 .text-red,
@@ -336,6 +337,14 @@ a {
   font-family: 'Orbitron', Arial, sans-serif;
   font-weight: 700;
   color: rgba(231, 56, 94, 0.932);
+}
+
+.text-pink,
+.article-text .text-pink,
+.article-text span.text-pink {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #ff79c6;
 }
 
 .text-yellow,
@@ -354,11 +363,45 @@ a {
   color: #69f0ae;
 }
 
+.subheading-green,
+.article-text .subheading-green,
+.article-text p.subheading-green {
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #69f0ae !important;
+  margin-top: 28px !important;
+  margin-bottom: 14px !important;
+  text-indent: 0 !important;
+}
+
+.subheading-brown,
+.article-text .subheading-brown,
+.article-text p.subheading-brown {
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #d7ccc8 !important;
+  margin-top: 28px !important;
+  margin-bottom: 14px !important;
+  text-indent: 0 !important;
+}
+
+.text-brown,
+.article-text .text-brown,
+.article-text span.text-brown {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #d7ccc8;
+}
+
 .article-note,
 .article-text .article-note,
 .article-text p.article-note {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.30);
   line-height: 1.7;
   font-style: italic;
   margin: 12px 0;
@@ -473,21 +516,47 @@ a {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 7px;
-  margin-top: 8px;
+  gap: 24px;
+  margin-top: 18px;
+  margin-bottom: 20px;
 }
 
 .article-text {
   flex: 1;
   min-width: 0;
+  max-width: 580px;
 }
 
-.article-text p:not([class*="section-"]) {
+.article-text p:not([class*="section-"]):not([class*="subheading-"]):not(.article-note) {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.8);
   line-height: 2;
+  text-indent: 28px;
+  margin-bottom: 16px;
+}
+
+.article-text p.section-label,
+.article-text p.section-label-big,
+.article-text p.subheading-purple,
+.article-text p.subheading-red,
+.article-text p.subheading-yellow,
+.article-text p.subheading-green,
+.article-text p.subheading-brown,
+.article-text p.article-note {
+  text-indent: 0;
+}
+
+.article-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Extra paragraph indent for alternating paragraphs to make text less condensed */
+.article-text p.indent,
+.article-text p.indented-p,
+.article-text div.indent {
+  padding-left: 28px;
 }
 
 .article-images {
@@ -516,6 +585,35 @@ a {
   height: 100%;
   object-fit: contain;
   padding: 6px;
+}
+
+/* Medium Image Box (for diagrams with labels/equations like Linearity and Unit Square) */
+.article-images.medium {
+  width: 380px;
+  min-width: 380px;
+}
+
+.article-img-box.medium,
+.article-img-box-medium {
+  width: 380px;
+  height: auto;
+  min-height: 270px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-img-box.medium img,
+.article-img-box-medium img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  padding: 10px;
 }
 
 /* Big image box modifier for featured or proof diagrams */
@@ -568,14 +666,17 @@ a {
   letter-spacing: 0.02em;
 }
 
-.math-inline {
-  font-family: 'Roboto Mono', 'Courier New', monospace;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #9be3ff;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 2px 6px;
-  border-radius: 4px;
+.math-inline,
+.article-text .math-inline,
+.article-text p .math-inline,
+.article-text span.math-inline {
+  font-family: 'Roboto Mono', 'Courier New', monospace !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  color: #82e9ff !important;
+  background-color: rgba(255, 255, 255, 0.09) !important;
+  padding: 3px 7px !important;
+  border-radius: 4px !important;
 }
 
 /* ============================================
@@ -725,7 +826,17 @@ a.wip::after {
 }
 
 .current-weekly-fact {
-  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 12px;
+  transition: all 0.25s ease;
+}
+
+.current-weekly-fact:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.035);
 }
 
 .relogifact-history-btn {
@@ -775,15 +886,15 @@ a.wip::after {
 
 /* Modal Box */
 .modal-box {
-  background-color: #0d0e12;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 8px;
+  background-color: #0c0d11;
+  border: 1px solid rgba(133, 167, 235, 0.35);
+  border-radius: 10px;
   width: 100%;
   max-width: 620px;
   max-height: 80vh;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.95), 0 0 30px rgba(133, 167, 235, 0.15);
   overflow: hidden;
 }
 
@@ -870,17 +981,17 @@ a.wip::after {
 ============================================ */
 
 .concept-explorer-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-left: 3px solid #ffd866;
-  border-radius: 6px;
-  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 12px;
   transition: all 0.25s ease;
 }
 
 .concept-explorer-card:hover {
-  border-color: rgba(255, 216, 102, 0.5);
-  box-shadow: 0 0 20px rgba(255, 216, 102, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.035);
 }
 
 .concept-tag {
@@ -893,10 +1004,11 @@ a.wip::after {
 }
 
 .suggestion-card {
-  background: rgba(133, 167, 235, 0.04);
-  border: 1px solid rgba(133, 167, 235, 0.25);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  padding: 20px 24px;
+  padding: 24px;
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -904,8 +1016,8 @@ a.wip::after {
 }
 
 .suggestion-card:hover {
-  border-color: rgb(133, 167, 235);
-  box-shadow: 0 0 24px rgba(133, 167, 235, 0.2);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.035);
 }
 
 .suggestion-header {
@@ -1024,10 +1136,10 @@ a.wip::after {
 }
 
 .creator-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  padding: 22px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1035,8 +1147,8 @@ a.wip::after {
 }
 
 .creator-card:hover {
-  border-color: rgb(217, 195, 245);
-  box-shadow: 0 0 25px rgba(217, 195, 245, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.035);
 }
 
 .creator-avatar-wrap {
@@ -1165,7 +1277,8 @@ a.wip::after {
     flex-direction: column;
   }
 
-  .article-images {
+  .article-images,
+  .article-images.medium {
     width: 100%;
     min-width: auto;
     flex-direction: row;
@@ -1178,6 +1291,8 @@ a.wip::after {
     aspect-ratio: 4 / 3;
   }
 
+  .article-img-box.medium,
+  .article-img-box-medium,
   .article-img-box.big,
   .article-img-box-big {
     width: 100%;
@@ -1203,5 +1318,20 @@ a.wip::after {
   .modal-header, .modal-body {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .article-text p.indent,
+  .article-text p.indented-p,
+  .article-text div.indent,
+  .subheading-purple,
+  .article-text .subheading-purple,
+  .article-text p.subheading-purple,
+  .subheading-red,
+  .article-text .subheading-red,
+  .article-text p.subheading-red,
+  .subheading-yellow,
+  .article-text .subheading-yellow,
+  .article-text p.subheading-yellow {
+    padding-left: 14px;
   }
 }
