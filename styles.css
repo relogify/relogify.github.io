@@ -536,6 +536,11 @@ a {
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.8);
   line-height: 2;
+  margin-bottom: 16px;
+}
+
+.article-text p:last-child {
+  margin-bottom: 0;
 }
 
 /* Extra paragraph indent for alternating paragraphs to make text less condensed */
