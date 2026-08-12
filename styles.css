@@ -358,6 +358,40 @@ a {
   color: #69f0ae;
 }
 
+.subheading-green,
+.article-text .subheading-green,
+.article-text p.subheading-green {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1.22rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #69f0ae;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+
+.subheading-brown,
+.article-text .subheading-brown,
+.article-text p.subheading-brown {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1.22rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d7ccc8;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+
+.text-brown,
+.article-text .text-brown,
+.article-text span.text-brown {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #d7ccc8;
+}
+
 .article-note,
 .article-text .article-note,
 .article-text p.article-note {
