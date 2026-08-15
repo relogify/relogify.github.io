@@ -1,0 +1,1 @@
+"<span class='section-text-3'>1729</span> is the smallest number which can be expressed as the sum of two cubes in two different ways: <div class='math-equation'>1729 = 1³ + 12³ = 9³ + 10³</div> This number is known as the Hardy-Ramanujan number, or Ramanujan's Constant, named after the mathematicians G.H. Hardy and Srinivasa Ramanujan." July 30, 2026

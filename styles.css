@@ -215,25 +215,36 @@ a {
   margin-bottom:0px;
 }
 
-.section-label {
+/* ============================================
+   TYPOGRAPHY — SECTIONS & LABELS
+============================================ */
+
+.section-label,
+.article-text .section-label,
+.article-text p.section-label {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.30);
   margin-bottom: 10px;
 }
 
-.section-label-big {
+.section-label-big,
+.article-text .section-label-big,
+.article-text p.section-label-big {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: rgb(217, 195, 245);
-  margin-bottom: 10px;
+  margin-top: 24px;
+  margin-bottom: 14px;
 }
 
 .section-text {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 0.82rem;
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -241,7 +252,9 @@ a {
   line-height: 1.9;
   max-width: 580px;
 }
+
 .section-text-2 {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 0.82rem;
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -249,7 +262,12 @@ a {
   line-height: 1.9;
   max-width: 100%;
 }
-.section-text-3 {
+
+.section-text-3,
+.article-text .section-text-3,
+.article-text p.section-text-3,
+.article-text span.section-text-3 {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -257,7 +275,9 @@ a {
   line-height: 1.9;
   max-width: 100%;
 }
+
 .section-text-4 {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 1.267rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -265,6 +285,126 @@ a {
   line-height: 1.9;
   max-width: 100%;
   text-align: center;
+}
+
+/* ============================================
+   ARTICLE SUBHEADINGS & HIGHLIGHT TEXT
+============================================ */
+
+.subheading-purple,
+.article-text .subheading-purple,
+.article-text p.subheading-purple {
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: rgb(217, 195, 245) !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  text-indent: 0 !important;
+}
+
+.subheading-red,
+.article-text .subheading-red,
+.article-text p.subheading-red {
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: rgba(231, 56, 94, 0.932) !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  text-indent: 0 !important;
+}
+
+.subheading-yellow,
+.article-text .subheading-yellow,
+.article-text p.subheading-yellow {
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #ffd866 !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  text-indent: 0 !important;
+}
+
+.text-red,
+.article-text .text-red,
+.article-text span.text-red,
+.article-text u.text-red {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: rgba(231, 56, 94, 0.932);
+}
+
+.text-pink,
+.article-text .text-pink,
+.article-text span.text-pink {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #ff79c6;
+}
+
+.text-yellow,
+.article-text .text-yellow,
+.article-text span.text-yellow {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #ffd866;
+}
+
+.text-green,
+.article-text .text-green,
+.article-text span.text-green {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #69f0ae;
+}
+
+.subheading-green,
+.article-text .subheading-green,
+.article-text p.subheading-green {
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #69f0ae !important;
+  margin-top: 28px !important;
+  margin-bottom: 14px !important;
+  text-indent: 0 !important;
+}
+
+.subheading-brown,
+.article-text .subheading-brown,
+.article-text p.subheading-brown {
+  font-family: 'Orbitron', Arial, sans-serif !important;
+  font-size: 1.22rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  color: #d7ccc8 !important;
+  margin-top: 28px !important;
+  margin-bottom: 14px !important;
+  text-indent: 0 !important;
+}
+
+.text-brown,
+.article-text .text-brown,
+.article-text span.text-brown {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  color: #d7ccc8;
+}
+
+.article-note,
+.article-text .article-note,
+.article-text p.article-note {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.30);
+  line-height: 1.7;
+  font-style: italic;
+  margin: 12px 0;
 }
 
 /* ============================================
@@ -310,6 +450,7 @@ a {
 ============================================ */
 
 .section-subtitle {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 21px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -319,6 +460,7 @@ a {
 }
 
 .section-click-prompt {
+  font-family: 'Orbitron', Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -374,21 +516,47 @@ a {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 7px;
-  margin-top: 8px;
+  gap: 24px;
+  margin-top: 18px;
+  margin-bottom: 20px;
 }
 
 .article-text {
   flex: 1;
   min-width: 0;
+  max-width: 580px;
 }
 
-.article-text p {
+.article-text p:not([class*="section-"]):not([class*="subheading-"]):not(.article-note) {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.8);
   line-height: 2;
+  text-indent: 28px;
+  margin-bottom: 16px;
+}
+
+.article-text p.section-label,
+.article-text p.section-label-big,
+.article-text p.subheading-purple,
+.article-text p.subheading-red,
+.article-text p.subheading-yellow,
+.article-text p.subheading-green,
+.article-text p.subheading-brown,
+.article-text p.article-note {
+  text-indent: 0;
+}
+
+.article-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Extra paragraph indent for alternating paragraphs to make text less condensed */
+.article-text p.indent,
+.article-text p.indented-p,
+.article-text div.indent {
+  padding-left: 28px;
 }
 
 .article-images {
@@ -417,6 +585,125 @@ a {
   height: 100%;
   object-fit: contain;
   padding: 6px;
+}
+
+/* Medium Image Box (for diagrams with labels/equations like Linearity and Unit Square) */
+.article-images.medium {
+  width: 380px;
+  min-width: 380px;
+}
+
+.article-img-box.medium,
+.article-img-box-medium {
+  width: 380px;
+  height: auto;
+  min-height: 270px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-img-box.medium img,
+.article-img-box-medium img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Big image box modifier for featured or proof diagrams */
+.article-img-box.big,
+.article-img-box-big {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  min-height: 380px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.article-img-box.big img,
+.article-img-box-big img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  padding: 12px;
+}
+
+/* ============================================
+   MATH EQUATIONS & NOTATION
+   Use .math-equation for standalone equations
+   Use .math-inline for inline math notation
+============================================ */
+
+.math-equation {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #9be3ff;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid rgb(133, 167, 235);
+  padding: 10px 16px;
+  margin: 14px 0;
+  border-radius: 4px;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.math-inline,
+.article-text .math-inline,
+.article-text p .math-inline,
+.article-text span.math-inline {
+  font-family: 'Roboto Mono', 'Courier New', monospace !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  color: #82e9ff !important;
+  background-color: rgba(255, 255, 255, 0.09) !important;
+  padding: 3px 7px !important;
+  border-radius: 4px !important;
+}
+
+/* ============================================
+   WIP (WORK IN PROGRESS) SYMBOL FOR UNFINISHED ARTICLES
+   How to use:
+   Add <span class="wip-badge">🚧 WIP</span> after any unfinished article link
+   Or add class="wip" to any <a> tag
+============================================ */
+
+.wip-badge,
+a.wip::after {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffd866;
+  background-color: rgba(255, 216, 102, 0.12);
+  border: 1px solid rgba(255, 216, 102, 0.35);
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+a.wip::after {
+  content: "🚧 WIP";
 }
 
 /* ============================================
@@ -526,6 +813,431 @@ a {
 }
 
 /* ============================================
+   RELOGIFACT HISTORY FEATURE (BUTTON & MODAL)
+============================================ */
+
+.relogifact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.current-weekly-fact {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 12px;
+  transition: all 0.25s ease;
+}
+
+.current-weekly-fact:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.relogifact-history-btn {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(133, 167, 235, 0.15);
+  border: 1px solid rgb(133, 167, 235);
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.relogifact-history-btn:hover {
+  background-color: rgb(133, 167, 235);
+  color: #000;
+  box-shadow: 0 0 12px rgba(133, 167, 235, 0.4);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Box */
+.modal-box {
+  background-color: #0c0d11;
+  border: 1px solid rgba(133, 167, 235, 0.35);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.95), 0 0 30px rgba(133, 167, 235, 0.15);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(217, 195, 245);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: rgba(231, 56, 94, 0.932);
+}
+
+.modal-subtitle {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 0 24px 14px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Modal Body (scrollable list of cards) */
+.modal-body {
+  padding: 20px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Individual History Card */
+.history-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.history-card:hover {
+  border-color: rgb(133, 167, 235);
+}
+
+.history-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgb(133, 167, 235);
+  margin-bottom: 8px;
+}
+
+.history-fact {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ============================================
+   INTERACTIVE HOMEPAGE WIDGETS & SUGGESTION EMAIL
+============================================ */
+
+.concept-explorer-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 12px;
+  transition: all 0.25s ease;
+}
+
+.concept-explorer-card:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.concept-tag {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #ffd866;
+  margin-bottom: 8px;
+}
+
+.suggestion-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.25s ease;
+}
+
+.suggestion-card:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.suggestion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.suggestion-tag {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: rgb(217, 195, 245);
+}
+
+.suggestion-email {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  color: #9be3ff;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.suggestion-desc {
+  font-size: 0.84rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.suggestion-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+.suggestion-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ============================================
+   LATEST WEEKLY FACT POPUP & ARCHIVE ENHANCEMENTS
+============================================ */
+
+.latest-fact-box {
+  max-width: 540px;
+  border: 1px solid rgb(133, 167, 235);
+  box-shadow: 0 0 30px rgba(133, 167, 235, 0.25);
+}
+
+.latest-fact-text {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #9be3ff;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid rgb(133, 167, 235);
+  padding: 14px 18px;
+  border-radius: 4px;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 24px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dont-show-again-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  user-select: none;
+}
+
+.dont-show-again-label input[type="checkbox"] {
+  accent-color: rgb(133, 167, 235);
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.modal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sort-btn {
+  font-size: 0.65rem;
+  padding: 4px 10px;
+}
+
+/* ============================================
+   CREATORS & CONTACT SECTION (RESUME/PORTFOLIO READY)
+============================================ */
+
+.creator-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+
+.creator-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+
+.creator-card:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.creator-avatar-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgb(133, 167, 235);
+  background: rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+.creator-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.creator-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.creator-name {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.creator-role {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgb(133, 167, 235);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.creator-location {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.creator-bio {
+  font-size: 0.84rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 8px 0 12px;
+}
+
+.creator-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.creator-btn {
+  text-decoration: none;
+  font-size: 0.68rem;
+  padding: 5px 12px;
+}
+
+.creator-btn-alt {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.creator-btn-alt:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.contact-footer-note {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 18px;
+  font-size: 0.84rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ============================================
    RESPONSIVE
 ============================================ */
 
@@ -565,7 +1277,8 @@ a {
     flex-direction: column;
   }
 
-  .article-images {
+  .article-images,
+  .article-images.medium {
     width: 100%;
     min-width: auto;
     flex-direction: row;
@@ -577,6 +1290,16 @@ a {
     height: auto;
     aspect-ratio: 4 / 3;
   }
+
+  .article-img-box.medium,
+  .article-img-box-medium,
+  .article-img-box.big,
+  .article-img-box-big {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    aspect-ratio: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -586,5 +1309,29 @@ a {
 
   .content {
     padding: 80px 20px 40px;
+  }
+
+  .modal-box {
+    max-height: 90vh;
+  }
+
+  .modal-header, .modal-body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .article-text p.indent,
+  .article-text p.indented-p,
+  .article-text div.indent,
+  .subheading-purple,
+  .article-text .subheading-purple,
+  .article-text p.subheading-purple,
+  .subheading-red,
+  .article-text .subheading-red,
+  .article-text p.subheading-red,
+  .subheading-yellow,
+  .article-text .subheading-yellow,
+  .article-text p.subheading-yellow {
+    padding-left: 14px;
   }
 }

@@ -27,7 +27,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -55,9 +55,27 @@
 
         <p class="section-subtitle">If you want to help me out or if you really like the articles on this website, consider leaving a donation.</p>
         
-        <a href="#" class="donation-button">Donation</a>
+        <button class="donation-button" id="donateBtn" style="background:none; cursor:pointer;">Donation</button>
       </div>
     </main>
+  </div>
+
+  <!-- Donations Popup Modal -->
+  <div class="modal-overlay" id="donationModal">
+    <div class="modal-box" style="max-width: 520px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Donations</h2>
+        <button class="modal-close" id="closeDonationModal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.85); margin: 0;">
+          We appreciate your support, but we don't have a donations page set up yet. Please come again later to see if we have one up then!
+        </p>
+      </div>
+      <div class="modal-footer" style="justify-content: flex-end;">
+        <button class="relogifact-history-btn" id="closeDonationActionBtn">Got It</button>
+      </div>
+    </div>
   </div>
 
   <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
